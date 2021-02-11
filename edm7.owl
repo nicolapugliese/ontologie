@@ -1,0 +1,2397 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl/"
+     xml:base="http://www.europeana.eu/schemas/edm/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema/"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns/"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.europeana.eu/schemas/edm/">
+    <Prefix name="" IRI="http://www.europeana.eu/schemas/edm/"/>
+    <Prefix name="a" IRI="http://www.s.f.org/lex/type/clause/"/>
+    <Prefix name="b" IRI="http://www.s.f.org/perf/imposer/"/>
+    <Prefix name="c" IRI="http://www.s.f.org/lex/spec/"/>
+    <Prefix name="d" IRI="http://www.s.f.org/situation/conclure/"/>
+    <Prefix name="e" IRI="http://www.s.f.org/role/partie_contractante/"/>
+    <Prefix name="g" IRI="http://www.s.f.org/sit/exercer/action"/>
+    <Prefix name="o" IRI="urn:schemas-microsoft-com:office:office"/>
+    <Prefix name="s" IRI="http://schema.org/"/>
+    <Prefix name="w" IRI="http://www.s.f.org/sit/act/"/>
+    <Prefix name="x" IRI="http://www.s.f.org/perf/notion/"/>
+    <Prefix name="z" IRI="http://www.s.f.org/perf/"/>
+    <Prefix name="MF" IRI="http://purl.obolibrary.org/obo/MF/"/>
+    <Prefix name="MO" IRI="http://lapd.pt/myOntology.owl/"/>
+    <Prefix name="WV" IRI="http://www.wurvoc.org/vocabularies/WV/"/>
+    <Prefix name="ab" IRI="http://www.s.f.org/prod/reglementation/"/>
+    <Prefix name="ac" IRI="http://www.s.f.org/lex/type/clause/"/>
+    <Prefix name="at" IRI="http://publications.europa.eu/ontology/authority/"/>
+    <Prefix name="bd" IRI="http://www.bigdata.com/rdf/"/>
+    <Prefix name="bp" IRI="http://www.biopax.org/release/biopax-level3.owl/"/>
+    <Prefix name="cc" IRI="http://creativecommons.org/ns/"/>
+    <Prefix name="cd" IRI="http://www.recshop.fake/cd/"/>
+    <Prefix name="ci" IRI="https://www.oscinema.com.sg/cinema/"/>
+    <Prefix name="cl" IRI="http://purl.obolibrary.org/obo/cl/"/>
+    <Prefix name="cp" IRI="http://www.ontologydesignpatterns.org/cp/owl/partof.owl/"/>
+    <Prefix name="d0" IRI="http://www.ontologydesignpatterns.org/ont/d0.owl/"/>
+    <Prefix name="da" IRI="http://www.s.f.org/perf/reg/"/>
+    <Prefix name="db" IRI="http://localhost:2020/"/>
+    <Prefix name="dc" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="en" IRI="http://www.enseignement.org/"/>
+    <Prefix name="ex" IRI="http://example.com/ns/"/>
+    <Prefix name="fc" IRI="myprefix"/>
+    <Prefix name="fm" IRI="https://www.oscinema.com.sg/week3/"/>
+    <Prefix name="fn" IRI="http://www.w3.org/2005/xpath-functions/"/>
+    <Prefix name="gc" IRI="http://www.s.f.org/sit/"/>
+    <Prefix name="gf" IRI="http://www.gra.fo/schema/untitled-ekg/"/>
+    <Prefix name="gn" IRI="http://www.geonames.org/ontology/"/>
+    <Prefix name="go" IRI="http://purl.obolibrary.org/obo/go/"/>
+    <Prefix name="gr" IRI="http://purl.org/goodrelations/v1/"/>
+    <Prefix name="hp" IRI="urn:absolute://harbourpolitica/ontology/"/>
+    <Prefix name="ic" IRI="http://ontology.eil.utoronto.ca/tove/icontact/"/>
+    <Prefix name="id" IRI="http://w3id.org/wellfort/id/"/>
+    <Prefix name="kd" IRI="http://oziz.ffos.hr/kdjurdjevic/dk-ontologija/"/>
+    <Prefix name="l0" IRI="https://w3id.org/italia/onto/l0/"/>
+    <Prefix name="mf" IRI="http://www.w3.org/2001/sw/DataAccess/tests/test-manifest/"/>
+    <Prefix name="mo" IRI="http://www.semanticweb.org/mO/ontologies/2020/10/mO/"/>
+    <Prefix name="mv" IRI="http://schema.mobivoc.org//"/>
+    <Prefix name="ns" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns/"/>
+    <Prefix name="od" IRI="urn:schemas-microsoft-com:officedata"/>
+    <Prefix name="om" IRI="http://www.wurvoc.org/vocabularies/om-1.8/"/>
+    <Prefix name="ov" IRI="http://open.vocab.org/terms/"/>
+    <Prefix name="p1" IRI="/"/>
+    <Prefix name="pr" IRI="http://purl.obolibrary.org/obo/pr/"/>
+    <Prefix name="qb" IRI="http://purl.org/linked-data/cube/"/>
+    <Prefix name="ql" IRI="http://semweb.mmlab.be/ns/ql/"/>
+    <Prefix name="qu" IRI="http://purl.org/NET/ssnx/qu/qu/"/>
+    <Prefix name="rd" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/compact/routed_paths2.rdf/"/>
+    <Prefix name="ro" IRI="http://purl.org/roh/mirror/obo/ro/"/>
+    <Prefix name="rr" IRI="http://www.w3.org/ns/r2rml/"/>
+    <Prefix name="sc" IRI="http://purl.org/science/owl/sciencecommons/"/>
+    <Prefix name="sd" IRI="http://www.w3.org/ns/sparql-service-description/"/>
+    <Prefix name="sf" IRI="http://www.opengis.net/ont/sf/"/>
+    <Prefix name="sh" IRI="http://www.w3.org/ns/shacl/"/>
+    <Prefix name="si" IRI="https://www.w3schools.com/rdf/"/>
+    <Prefix name="sp" IRI="http://spinrdf.org/sp/"/>
+    <Prefix name="sr" IRI="http://www.w3.org/ns/sosa/sampling/"/>
+    <Prefix name="ss" IRI="urn:schemas-microsoft-com:office:spreadsheet"/>
+    <Prefix name="st" IRI="https://www.oscinema.com.sg/cinema/"/>
+    <Prefix name="sw" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns/"/>
+    <Prefix name="th" IRI="http://wissensgraph.informatik.fh-nuernberg.de/"/>
+    <Prefix name="ts" IRI="http://resource.geosciml.org/vocabulary/timescale/"/>
+    <Prefix name="ub" IRI="http://swat.cse.lehigh.edu/onto/univ-bench.owl/"/>
+    <Prefix name="v0" IRI="http://ethon.consensys.net/v0/"/>
+    <Prefix name="vs" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns/"/>
+    <Prefix name="wk" IRI="https://www.oscinema.com.sg/cinema/"/>
+    <Prefix name="wn" IRI="http://xmlns.com/wordnet/1.6/"/>
+    <Prefix name="xf" IRI="http://www.w3.org/2004/07/xpath-functions"/>
+    <Prefix name="xs" IRI="http://www.w3.org/2001/XMLSchema"/>
+    <Prefix name="CLV" IRI="https://w3id.org/italia/onto/CLV/"/>
+    <Prefix name="DUL" IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl/"/>
+    <Prefix name="EHR" IRI="http://purl.org/onto/EHR/"/>
+    <Prefix name="OWL" IRI="http://www.w3.org/2002/07/owl/"/>
+    <Prefix name="RID" IRI="http://radlex.org/RID/"/>
+    <Prefix name="SAN" IRI="http://dati.san.beniculturali.it/SAN/"/>
+    <Prefix name="SEG" IRI="http://www.outreach.io/SEG/"/>
+    <Prefix name="abc" IRI="http://metadata.net/harmony/abc/"/>
+    <Prefix name="act" IRI="http://ontology.eil.utoronto.ca/tove/activity/"/>
+    <Prefix name="air" IRI="http://www.megginson.com/exp/ns/airports/"/>
+    <Prefix name="aml" IRI="https://w3id.org/i40/aml/"/>
+    <Prefix name="api" IRI="http://purl.org/linked-data/api/vocab/"/>
+    <Prefix name="app" IRI="http://www.opengis.net/citygml/appearance/2.0/"/>
+    <Prefix name="arg" IRI="http://spinrdf.org/arg/"/>
+    <Prefix name="atm" IRI="https://data.nasa.gov/ontologies/atmonto/ATM/"/>
+    <Prefix name="bds" IRI="http://www.bigdata.com/rdf/search/"/>
+    <Prefix name="bfo" IRI="http://purl.org/roh/mirror/obo/bfo/"/>
+    <Prefix name="bio" IRI="http://purl.org/vocab/bio/0.1/"/>
+    <Prefix name="bot" IRI="https://w3id.org/bot/"/>
+    <Prefix name="bto" IRI="http://purl.obolibrary.org/obo/bto/"/>
+    <Prefix name="cav" IRI="http://ontology.eil.utoronto.ca/CAO/cav/"/>
+    <Prefix name="cco" IRI="http://www.ontologyrepository.com/CommonCoreOntologies/"/>
+    <Prefix name="cdt" IRI="http://w3id.org/lindt/custom_datatypes/"/>
+    <Prefix name="cim" IRI="http://iec.ch/TC57/2013/CIM-schema-cim16/"/>
+    <Prefix name="cis" IRI="http://dati.beniculturali.it/cis/"/>
+    <Prefix name="crm" IRI="http://www.cidoc-crm.org/cidoc-crm/"/>
+    <Prefix name="csw" IRI="http://semantic-web.at/ontologies/csw.owl/"/>
+    <Prefix name="cyc" IRI="http://sw.cyc.com/concept/"/>
+    <Prefix name="dbc" IRI="http://dbpedia.org/resource/Category:"/>
+    <Prefix name="dbo" IRI="http://dbpedia.org/ontology/"/>
+    <Prefix name="dbp" IRI="http://dbpedia.org/property/"/>
+    <Prefix name="dbr" IRI="http://dbpedia.org/resource/"/>
+    <Prefix name="dce" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="dct" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="dei" IRI="http://www.elet.polimi.it/"/>
+    <Prefix name="dem" IRI="http://www.opengis.net/citygml/relief/2.0/"/>
+    <Prefix name="dgr" IRI="http://www.aueb.gr/users/ion/nlowl/dgr/"/>
+    <Prefix name="dgu" IRI="http://reference.data.gov.uk/def/reference/"/>
+    <Prefix name="dii" IRI="urn:mpeg:mpeg21:2002:01-DII-NS/"/>
+    <Prefix name="doc" IRI="http://www.w3.org/2000/10/swap/pim/doc/"/>
+    <Prefix name="doe" IRI="tag:example"/>
+    <Prefix name="dos" IRI="https://mohamed.eldesouki.ca/rdf/"/>
+    <Prefix name="dpv" IRI="http://www.w3.org/ns/dpv/"/>
+    <Prefix name="dto" IRI="http://www.drugtargetontology.org/dto/"/>
+    <Prefix name="dul" IRI="http://www.loa.istc.cnr.it/ontologies/DUL.owl/"/>
+    <Prefix name="dwc" IRI="http://rs.tdwg.org/dwc/terms/"/>
+    <Prefix name="ecc" IRI="https://ns.eccenca.com/"/>
+    <Prefix name="eco" IRI="http://www.ebusiness-unibw.org/ontologies/eclass/5.1.4//"/>
+    <Prefix name="edm" IRI="http://www.europeana.eu/schemas/edm/"/>
+    <Prefix name="efo" IRI="http://www.ebi.ac.uk/efo/"/>
+    <Prefix name="epo" IRI="http://data.europa.eu/a4d/"/>
+    <Prefix name="eqp" IRI="https://data.nasa.gov/ontologies/atmonto/equipment/"/>
+    <Prefix name="fam" IRI="http://www.ifi.uio.no/IN3060/family/"/>
+    <Prefix name="fma" IRI="http://purl.obolibrary.org/obo/fma/"/>
+    <Prefix name="fno" IRI="https://w3id.org/function/ontology/"/>
+    <Prefix name="foo" IRI="http://geneontology.org/foo/"/>
+    <Prefix name="frn" IRI="http://www.opengis.net/citygml/cityfurniture/2.0/"/>
+    <Prefix name="fun" IRI="http://w3id.org/sparql-generate/fn/"/>
+    <Prefix name="gen" IRI="http://www.opengis.net/citygml/generics/2.0/"/>
+    <Prefix name="geo" IRI="http://www.opengis.net/ont/geosparql/"/>
+    <Prefix name="gis" IRI="http://www.opengis.net/ont/geosparql/"/>
+    <Prefix name="gml" IRI="http://www.opengis.net/gml/"/>
+    <Prefix name="grp" IRI="http://www.opengis.net/citygml/cityobjectgroup/2.0/"/>
+    <Prefix name="gts" IRI="http://resource.geosciml.org/ontology/timescale/gts/"/>
+    <Prefix name="hfp" IRI="http://www.w3.org/2001/XMLSchema-hasFacetAndProperty"/>
+    <Prefix name="hl7" IRI="http://hl7.org/ontology/metadata/"/>
+    <Prefix name="hls" IRI="/"/>
+    <Prefix name="hp2" IRI="http://purl.obolibrary.org/obo/hp.owl/"/>
+    <Prefix name="hps" IRI="urn:absolute://harbourpolitica/ontology/StoryUniverse/"/>
+    <Prefix name="i72" IRI="http://ontology.eil.utoronto.ca/ISO21972/iso21972/"/>
+    <Prefix name="iao" IRI="http://purl.org/roh/mirror/obo/iao/"/>
+    <Prefix name="ids" IRI="https://w3id.org/idsa/core/"/>
+    <Prefix name="ind" IRI="http://manusquare.project.eu/industrial-manusquare/"/>
+    <Prefix name="isc" IRI="http://resource.geosciml.org/classifier/ics/ischart/"/>
+    <Prefix name="j.0" IRI="http://www.ontologydesignpatterns.org/ont/boxer/boxing.owl/"/>
+    <Prefix name="j.1" IRI="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl/"/>
+    <Prefix name="j.2" IRI="http://www.ontologydesignpatterns.org/ont/fred/domain.owl/"/>
+    <Prefix name="j.3" IRI="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"/>
+    <Prefix name="j.4" IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl/"/>
+    <Prefix name="j.5" IRI="http://www.ontologydesignpatterns.org/ont/fred/pos.owl/"/>
+    <Prefix name="j.6" IRI="http://www.ontologydesignpatterns.org/ont/dul/DUL.owl/"/>
+    <Prefix name="j.7" IRI="http://www.ontologydesignpatterns.org/ont/fred/quantifiers.owl/"/>
+    <Prefix name="j.8" IRI="http://www.essepuntato.it/2008/12/earmark/"/>
+    <Prefix name="j.9" IRI="http://www.ontologydesignpatterns.org/ont/vn/abox/role/"/>
+    <Prefix name="jcl" IRI="http://jocondelab.iri-research.org/ns/jocondelab/"/>
+    <Prefix name="l01" IRI="https://w3id.org/italia/onto/l0/"/>
+    <Prefix name="lci" IRI="http//www.lacucinaitaliana.com/recipe/"/>
+    <Prefix name="lcx" IRI="http://www.i2group.com/Schemas/2001-12-07/LCXSchema"/>
+    <Prefix name="ldp" IRI="http://www.w3.org/ns/ldp/"/>
+    <Prefix name="lib" IRI="http://www.m2.as.u.like/myTerms/"/>
+    <Prefix name="log" IRI="http://example.org/ont/transaction-log/"/>
+    <Prefix name="map" IRI="http://localhost:2020//"/>
+    <Prefix name="mfg" IRI="http://www.workingontologist.org/Examples/Chapter3/Product.owl/"/>
+    <Prefix name="mld" IRI="http://mld.ace.fordham.edu/mld"/>
+    <Prefix name="mo2" IRI="http://www.movieontology.org/2009/11/09/movieontology.owl/"/>
+    <Prefix name="msg" IRI="http://langdale.com.au/2005/Message/"/>
+    <Prefix name="muo" IRI="http://purl.oclc.org/NET/muo/muo/"/>
+    <Prefix name="mus" IRI="http://data.doremus.org/ontology/"/>
+    <Prefix name="mvo" IRI="http://www.semanticweb.org/nataraj.bukkambudi/ontologies/2020/2/voyager_ontology.owl/mvo:"/>
+    <Prefix name="nas" IRI="https://data.nasa.gov/ontologies/atmonto/NAS/"/>
+    <Prefix name="nbo" IRI="http://purl.obolibrary.org/obo/nbo.owl/"/>
+    <Prefix name="nci" IRI="http://ncicb.nci.nih.gov/xml/owl/EVS/Thesaurus.owl/"/>
+    <Prefix name="nml" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/ontology/nml-base.owl/"/>
+    <Prefix name="npg" IRI="http://ns.nature.com/terms/"/>
+    <Prefix name="ns0" IRI="https://oci.oracle.com/vision/"/>
+    <Prefix name="ns1" IRI="urn:IEEE-1641:2010:DigitalTSFLib"/>
+    <Prefix name="ns2" IRI="http://www.i2group.com/Schemas/2011-03-03/ModelSchema"/>
+    <Prefix name="ns3" IRI="http://www.i2group.com/Schemas/2011-03-03/ModelSchemaExtension"/>
+    <Prefix name="ns4" IRI="http://dbpedia.org/ontology/Lake/"/>
+    <Prefix name="ns5" IRI="http://purl.org/iso25964/skos-thes/"/>
+    <Prefix name="ns6" IRI="http://creativecommons.org/ns/"/>
+    <Prefix name="ns7" IRI="http://dbpedia.org/ontology/MeanOfTransportation/"/>
+    <Prefix name="ns8" IRI="http://isidore.science/ontology/"/>
+    <Prefix name="ns9" IRI="http://mappings.dbpedia.org/index.php/OntologyProperty:"/>
+    <Prefix name="oad" IRI="http://lod.xdams.org/reload/oad/"/>
+    <Prefix name="obo" IRI="http://purl.obolibrary.org/obo/"/>
+    <Prefix name="ogc" IRI="http://www.opengis.net/"/>
+    <Prefix name="ogr" IRI="http://ogr.maptools.org/"/>
+    <Prefix name="olo" IRI="http://purl.org/ontology/olo/core/"/>
+    <Prefix name="ont" IRI="http://www.co-ode.org/ontologies/ont.owl/"/>
+    <Prefix name="opt" IRI="http://www.adeptik.com/optimistics/"/>
+    <Prefix name="ore" IRI="http://www.openarchives.org/ore/terms/"/>
+    <Prefix name="org" IRI="http://www.w3.org/ns/org/"/>
+    <Prefix name="oro" IRI="http://kb.openrobots.org/"/>
+    <Prefix name="otn" IRI="http://www.pms.ifi.uni-muenchen.de/OTN/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl/"/>
+    <Prefix name="pim" IRI="http://www.w3.org/2000/10/swap/pim/contact/"/>
+    <Prefix name="qdr" IRI="http://data.europa.eu/esco/qdr/"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/"/>
+    <Prefix name="rel" IRI="http://purl.org/vocab/relationship/"/>
+    <Prefix name="res" IRI="http://www.w3.org/2005/sparql-results/"/>
+    <Prefix name="rev" IRI="http://purl.org/stuff/rev/"/>
+    <Prefix name="rim" IRI="http://hl7.org/fhir/rim/"/>
+    <Prefix name="rml" IRI="http://semweb.mmlab.be/ns/rml/"/>
+    <Prefix name="rov" IRI="http://www.w3.org/ns/regorg/"/>
+    <Prefix name="rss" IRI="http://purl.org/rss/1.0/"/>
+    <Prefix name="rut" IRI="http://rdfunit.aksw.org/ns/core/"/>
+    <Prefix name="sc1" IRI="https://www.oscinema.com.sg/cinema/Screen1/"/>
+    <Prefix name="sc2" IRI="https://www.oscinema.com.sg/cinema/Screen2/"/>
+    <Prefix name="sc3" IRI="https://www.oscinema.com.sg/cinema/Screen3/"/>
+    <Prefix name="sch" IRI="http://schema.org/"/>
+    <Prefix name="sct" IRI="http://snomed.info/id/"/>
+    <Prefix name="scv" IRI="http://purl.org/NET/scovo/"/>
+    <Prefix name="sdg" IRI="http://purl.unep.org/sdg/"/>
+    <Prefix name="sdo" IRI="http://schema.org/"/>
+    <Prefix name="sfn" IRI="http://www.w3.org/ns/sparql/"/>
+    <Prefix name="sio" IRI="https://semanticscience.org/resource/"/>
+    <Prefix name="spl" IRI="http://www.specialprivacy.eu/langs/usage-policy/"/>
+    <Prefix name="spo" IRI="http://ontologies.schneider-electric.com/spo/"/>
+    <Prefix name="srv" IRI="http://example.org/data/server/"/>
+    <Prefix name="ssn" IRI="https://www.w3.org/ns/ssn/"/>
+    <Prefix name="st1" IRI="https://www.oscinema.com.sg/cinema/showtime/slot1/"/>
+    <Prefix name="st2" IRI="https://www.oscinema.com.sg/cinema/showtime/slot2/"/>
+    <Prefix name="st3" IRI="https://www.oscinema.com.sg/cinema/showtime/slot3/"/>
+    <Prefix name="std" IRI="urn:IEEE-1641:2010:STDBSC"/>
+    <Prefix name="sto" IRI="https://ken.baclawski.com/STO/"/>
+    <Prefix name="stx" IRI="http://purl.org/cyber/stix/"/>
+    <Prefix name="sub" IRI="localhost:25565/Rights-Sub-Provisions"/>
+    <Prefix name="svd" IRI="http://www.specialprivacy.eu/vocabs/data/"/>
+    <Prefix name="swc" IRI="http://schema.semantic-web.at/ppt/"/>
+    <Prefix name="swo" IRI="http://www.ebi.ac.uk/swo/"/>
+    <Prefix name="tag" IRI="https://brickschema.org/schema/1.1/BrickTag/"/>
+    <Prefix name="tex" IRI="http://www.opengis.net/citygml/texturedsurface/2.0/"/>
+    <Prefix name="th1" IRI="https://www.oscinema.com.sg/cinema/Week1/theme1/Screen3/"/>
+    <Prefix name="th2" IRI="https://www.oscinema.com.sg/cinema/Week1/theme2/Screen3/"/>
+    <Prefix name="th3" IRI="https://www.oscinema.com.sg/cinema/Week1/theme3/Screen3/"/>
+    <Prefix name="th4" IRI="https://www.oscinema.com.sg/cinema/Week2/theme1/Screen3/"/>
+    <Prefix name="th5" IRI="https://www.oscinema.com.sg/cinema/Week2/theme2/Screen3/"/>
+    <Prefix name="th6" IRI="https://www.oscinema.com.sg/cinema/Week2/theme3/Screen3/"/>
+    <Prefix name="th7" IRI="https://www.oscinema.com.sg/cinema/Week3/theme1/Screen3/"/>
+    <Prefix name="th8" IRI="https://www.oscinema.com.sg/cinema/Week3/theme2/Screen3/"/>
+    <Prefix name="th9" IRI="https://www.oscinema.com.sg/cinema/Week3/theme3/Screen3/"/>
+    <Prefix name="tim" IRI="https://www.w3.org/People/Berners-Lee/"/>
+    <Prefix name="tm1" IRI="https://www.oscinema.com.sg/cinema/Week1/"/>
+    <Prefix name="tm2" IRI="https://www.oscinema.com.sg/cinema/Week2/"/>
+    <Prefix name="tm3" IRI="https://www.oscinema.com.sg/cinema/Week3/"/>
+    <Prefix name="top" IRI="http://www.estrellaproject.org/lkif-core/lkif-top.owl/"/>
+    <Prefix name="tsf" IRI="urn:IEEE-1641:2010:STDTSF"/>
+    <Prefix name="tsl" IRI="http://www.Cproject.at/warehouse"/>
+    <Prefix name="tun" IRI="http://www.opengis.net/citygml/tunnel/2.0/"/>
+    <Prefix name="tvc" IRI="http://www.essepuntato.it/2012/04/tvc/"/>
+    <Prefix name="txn" IRI="http://example.org/data/transaction/"/>
+    <Prefix name="uco" IRI="http://purl.org/cyber/"/>
+    <Prefix name="ufo" IRI="http://onto.fel.cvut.cz/ontologies/ufo/"/>
+    <Prefix name="uld" IRI="https://onerecord.iata.org/Uld/"/>
+    <Prefix name="uml" IRI="http://langdale.com.au/2005/UML/"/>
+    <Prefix name="uni" IRI="http://www.mydomain.org/uni-ns/"/>
+    <Prefix name="uom" IRI="http://www.opengis.net/def/uom/OGC/1.0/"/>
+    <Prefix name="urn" IRI="http://www.w3.org/urn"/>
+    <Prefix name="v4e" IRI="http://bdi.si.ehu.es/bdi/ontologies/extrusion/visualization4ExtruOnt/"/>
+    <Prefix name="veg" IRI="http://www.opengis.net/citygml/vegetation/2.0/"/>
+    <Prefix name="vin" IRI="http://www.w3.org/TR/2003/PR-owl-guide-20031209/wine/"/>
+    <Prefix name="vra" IRI="http://purl.org/vra/"/>
+    <Prefix name="wgs" IRI="http://www.w3.org/2003/01/geo/wgs84_pos/"/>
+    <Prefix name="wot" IRI="http://xmlns.com/wot/0.1/"/>
+    <Prefix name="wtr" IRI="http://www.opengis.net/citygml/waterbody/2.0/"/>
+    <Prefix name="www" IRI="http://www.semanticweb.org/"/>
+    <Prefix name="xhv" IRI="http://www.w3.org/1999/xhtml/vocab/"/>
+    <Prefix name="xmi" IRI="http://www.omg.org/XMI"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema/"/>
+    <Prefix name="xsi" IRI="http://www.w3.org/2001/XMLSchema-instance"/>
+    <Prefix name="xsp" IRI="http://www.owl-ontologies.com/2005/08/07/xsp.owl/"/>
+    <Prefix name="zoo" IRI="http://example.org/zoo/"/>
+    <Prefix name="ADMS" IRI="https://w3id.org/italia/onto/ADMS/"/>
+    <Prefix name="Cibo" IRI="http://almawave.it/ontologies/2020/01/09/Cibo/"/>
+    <Prefix name="Thin" IRI="http://www.think-project.org/ThinkD/"/>
+    <Prefix name="a-cc" IRI="https://w3id.org/arco/ontology/cataloguing-campaign/"/>
+    <Prefix name="a-cd" IRI="https://w3id.org/arco/ontology/context-description/"/>
+    <Prefix name="a-ce" IRI="https://w3id.org/arco/ontology/cultural-event/"/>
+    <Prefix name="a-dd" IRI="https://w3id.org/arco/ontology/denotative-description/"/>
+    <Prefix name="a-ip" IRI="https://w3id.org/arco/ontology/immovable-property/"/>
+    <Prefix name="a-mp" IRI="https://w3id.org/arco/ontology/movable-property/"/>
+    <Prefix name="adkd" IRI="http://oziz.ffos.hr/aboras/ak-ontologija/"/>
+    <Prefix name="adms" IRI="http://www.w3.org/ns/adms/"/>
+    <Prefix name="arco" IRI="https://w3id.org/arco/ontology/arco/"/>
+    <Prefix name="area" IRI="http://www.area.it/area/"/>
+    <Prefix name="asit" IRI="http://purl.org/asit/terms/"/>
+    <Prefix name="base" IRI="http://www.cs.umbc.edu/~aks1/ontosem.owl"/>
+    <Prefix name="bckm" IRI="http://desiree-project.eu/bckm/"/>
+    <Prefix name="bibo" IRI="http://purl.org/roh/mirror/bibo/"/>
+    <Prefix name="bido" IRI="http://purl.org/spar/bido/"/>
+    <Prefix name="bldg" IRI="http://www.opengis.net/citygml/building/2.0/"/>
+    <Prefix name="brid" IRI="http://www.opengis.net/citygml/bridge/2.0/"/>
+    <Prefix name="bsbm" IRI="http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/vocabulary/"/>
+    <Prefix name="bspo" IRI="http://purl.obolibrary.org/obo/bspo/"/>
+    <Prefix name="cafo" IRI="http://ontology.eil.utoronto.ca/CAO/cafo/"/>
+    <Prefix name="caso" IRI="http://www.w3id.org/def/caso/"/>
+    <Prefix name="cims" IRI="http://iec.ch/TC57/1999/rdf-schema-extensions-19990926/"/>
+    <Prefix name="cito" IRI="http://purl.org/spar/cito/"/>
+    <Prefix name="conf" IRI="http:conf/"/>
+    <Prefix name="core" IRI="https://w3id.org/arco/ontology/core/"/>
+    <Prefix name="csdo" IRI="http://www.csdo.org/2019/5/csdo/"/>
+    <Prefix name="csvw" IRI="http://www.w3.org/ns/csvw/"/>
+    <Prefix name="ctag" IRI="http://commontag.org/ns/"/>
+    <Prefix name="ctro" IRI="http://www.semanticweb.org/root/ontologies/2018/6/ctro/"/>
+    <Prefix name="cwrc" IRI="http://sparql.cwrc.ca/ontologies/cwrc/"/>
+    <Prefix name="d2rq" IRI="http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1/"/>
+    <Prefix name="daml" IRI="http://www.daml.org/2001/03/daml+oil/"/>
+    <Prefix name="data" IRI="https://data.nasa.gov/ontologies/atmonto/data/"/>
+    <Prefix name="dc11" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="dcat" IRI="http://www.w3.org/ns/dcat/"/>
+    <Prefix name="doap" IRI="http://usefulinc.com/ns/doap/"/>
+    <Prefix name="doid" IRI="http://purl.obolibrary.org/obo/doid/"/>
+    <Prefix name="dram" IRI="http://www.cesar/www.dramabase/ontology/"/>
+    <Prefix name="dto1" IRI="http://www.drugtargetontology.org/dto/"/>
+    <Prefix name="ecrm" IRI="http://erlangen-crm.org/current/"/>
+    <Prefix name="edmx" IRI="http://docs.oasis-open.org/odata/ns/edmx"/>
+    <Prefix name="elda" IRI="http://www.epimorphics.com/vocabularies/lda/"/>
+    <Prefix name="envo" IRI="http://purl.obolibrary.org/obo/envo/"/>
+    <Prefix name="esco" IRI="http://data.europa.eu/esco/model/"/>
+    <Prefix name="exam" IRI="http://www.cs.le.ac.uk/co7216/exam/"/>
+    <Prefix name="exif" IRI="http://www.w3.org/2003/12/exif/ns/"/>
+    <Prefix name="fhir" IRI="http://hl7.org/fhir/"/>
+    <Prefix name="film" IRI="http://www.semprog.com/film/"/>
+    <Prefix name="fnml" IRI="http://semweb.mmlab.be/ns/fnml/"/>
+    <Prefix name="foaf" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="focu" IRI="http://focu.io/schema/"/>
+    <Prefix name="food" IRI="http://www.w3.org/TR/2003/PR-owl-guide-20031209/food/"/>
+    <Prefix name="geof" IRI="http://www.opengis.net/def/function/geosparql/"/>
+    <Prefix name="geos" IRI="http://www.opengis.net/ont/geosparql/"/>
+    <Prefix name="gist" IRI="https://ontologies.semanticarts.com/gist/"/>
+    <Prefix name="greg" IRI="http://www.w3.org/ns/time/gregorian/"/>
+    <Prefix name="gres" IRI="http://genomic-resources.eu/resource/"/>
+    <Prefix name="gtfs" IRI="http://vocab.gtfs.org/terms/"/>
+    <Prefix name="hint" IRI="http://www.bigdata.com/queryHints/"/>
+    <Prefix name="html" IRI="http://www.w3.org/TR/REC-html40"/>
+    <Prefix name="http" IRI="http://"/>
+    <Prefix name="idsc" IRI="https://w3id.org/idsa/code/"/>
+    <Prefix name="idsm" IRI="https://w3id.org/idsa/metamodel/"/>
+    <Prefix name="imdb" IRI="http://www.imdb.com/"/>
+    <Prefix name="inst" IRI="http://manusquare.project.eu/instances-manusquare//"/>
+    <Prefix name="isbd" IRI="http://iflastandards.info/ns/isbd/elements/"/>
+    <Prefix name="item" IRI="https://onerecord.iata.org/Item/"/>
+    <Prefix name="iter" IRI="http://w3id.org/sparql-generate/iter/"/>
+    <Prefix name="j.10" IRI="http://www.ontologydesignpatterns.org/ont/fred/pos.owl/"/>
+    <Prefix name="j.11" IRI="http://www.ontologydesignpatterns.org/ont/fred/domain.owl/%27"/>
+    <Prefix name="j.12" IRI="http://www.ontologydesignpatterns.org/ont/cnlp/coref.owl/"/>
+    <Prefix name="j.13" IRI="http://dbpedia.org/resource/Element_(mathematics)"/>
+    <Prefix name="jerm" IRI="http://www.mygrid.org.uk/ontology/JERMOntology/"/>
+    <Prefix name="kids" IRI="https://ken.baclawski.com/kids/"/>
+    <Prefix name="km4c" IRI="http://www.disit.org/km4city/schema/"/>
+    <Prefix name="lang" IRI="http://purl.org/net/inkel/rdf/schemas/lang/1.1/"/>
+    <Prefix name="lcon" IRI="http://www.w3.org/ns/locn/"/>
+    <Prefix name="locn" IRI="http://www.w3.org/ns/locn/"/>
+    <Prefix name="luse" IRI="http://www.opengis.net/citygml/landuse/2.0/"/>
+    <Prefix name="math" IRI="http://www.w3.org/2000/10/swap/math/"/>
+    <Prefix name="meme" IRI="http://meme.schema.org/"/>
+    <Prefix name="mesh" IRI="https://meshb.nlm.nih.gov/record/"/>
+    <Prefix name="misp" IRI="http://purl.org/cyber/misp/"/>
+    <Prefix name="mvco" IRI="http://purl.oclc.org/NET/mvco.owl/"/>
+    <Prefix name="myns" IRI="http://www.dis.uniroma1.it/%7Erosati/semanticweb/"/>
+    <Prefix name="nerd" IRI="http://nerd.eurecom.fr/ontology/"/>
+    <Prefix name="npgd" IRI="http://ns.nature.com/datasets/"/>
+    <Prefix name="npgg" IRI="http://ns.nature.com/graphs/"/>
+    <Prefix name="ns10" IRI="http://dbpedia.org/datatype/"/>
+    <Prefix name="ns11" IRI="http://www.geonames.org/ontology/"/>
+    <Prefix name="ns12" IRI="http://lexvo.org/ontology/"/>
+    <Prefix name="ns13" IRI="http://dbpedia.org/ontology/ChemicalSubstance/"/>
+    <Prefix name="ns14" IRI="http://dbpedia.org/ontology/ConveyorSystem/"/>
+    <Prefix name="ns15" IRI="http://dbpedia.org/ontology/Drug/"/>
+    <Prefix name="ns16" IRI="http://dbpedia.org/ontology/Escalator/"/>
+    <Prefix name="ns17" IRI="http://dbpedia.org/ontology/Galaxy/"/>
+    <Prefix name="ns18" IRI="http://dbpedia.org/ontology/GeopoliticalOrganisation/"/>
+    <Prefix name="ns19" IRI="http://purl.org/linguistics/gold/"/>
+    <Prefix name="ns20" IRI="http://dbpedia.org/ontology/LunarCrater/"/>
+    <Prefix name="ns21" IRI="http://dbpedia.org/ontology/MovingWalkway/"/>
+    <Prefix name="ns22" IRI="http://dbpedia.org/ontology/On-SiteTransportation/"/>
+    <Prefix name="ns23" IRI="http://dbpedia.org/ontology/Planet/"/>
+    <Prefix name="ns24" IRI="http://dbpedia.org/ontology/Rocket/"/>
+    <Prefix name="ns25" IRI="http://dbpedia.org/ontology/School/"/>
+    <Prefix name="ns26" IRI="http://dbpedia.org/ontology/Software/"/>
+    <Prefix name="ns27" IRI="http://dbpedia.org/ontology/SpaceMission/"/>
+    <Prefix name="ns28" IRI="http://dbpedia.org/ontology/SpaceShuttle/"/>
+    <Prefix name="ns29" IRI="http://dbpedia.org/ontology/SpaceStation/"/>
+    <Prefix name="ns30" IRI="http://dbpedia.org/ontology/Spacecraft/"/>
+    <Prefix name="ns31" IRI="http://dbpedia.org/ontology/Person/"/>
+    <Prefix name="ns32" IRI="http://dbpedia.org/ontology/Infrastructure/"/>
+    <Prefix name="ns33" IRI="http://dbpedia.org/ontology/Building/"/>
+    <Prefix name="ns34" IRI="http://dbpedia.org/ontology/Astronaut/"/>
+    <Prefix name="ns35" IRI="http://dbpedia.org/ontology/Work/"/>
+    <Prefix name="ns37" IRI="http://purl.org/vocommons/voaf/"/>
+    <Prefix name="ns40" IRI="http://wiki.dbpedia.org/"/>
+    <Prefix name="ns42" IRI="http://creativecommons.org/ns/"/>
+    <Prefix name="ns43" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="ns44" IRI="http://open.vocab.org/terms/"/>
+    <Prefix name="obda" IRI="https://w3id.org/obda/vocabulary/"/>
+    <Prefix name="obo2" IRI="http://www.geneontology.org/formats/oboInOwl/http://purl.obolibrary.org/obo/"/>
+    <Prefix name="ocsw" IRI="http://data.diekb.org/def/ocsw/"/>
+    <Prefix name="odrl" IRI="http://www.w3.org/ns/odrl/2/"/>
+    <Prefix name="oeev" IRI="http://www.opensilex.org/vocabulary/oeev/"/>
+    <Prefix name="ogit" IRI="http://www.purl.org/ogit/"/>
+    <Prefix name="om-2" IRI="http://www.ontology-of-units-of-measure.org/resource/om-2/"/>
+    <Prefix name="onto" IRI="http://fakesite.org/system.owl/"/>
+    <Prefix name="opla" IRI="http://ontologydesignpatterns.org/opla/"/>
+    <Prefix name="owl2" IRI="http://www.w3.org/2006/12/owl2/"/>
+    <Prefix name="owlx" IRI="http://www.w3.org/2003/05/owl-xml"/>
+    <Prefix name="page" IRI="http://dbpedia.org/page/"/>
+    <Prefix name="pato" IRI="http://purl.obolibrary.org/obo/pato/"/>
+    <Prefix name="phil" IRI="http://philosurfical.open.ac.uk/ontology/philosurfical.owl/"/>
+    <Prefix name="pico" IRI="http://data.cochrane.org/ontologies/pico/"/>
+    <Prefix name="prov" IRI="http://www.w3.org/ns/prov/"/>
+    <Prefix name="qudt" IRI="http://qudt.org/schema/qudt/"/>
+    <Prefix name="rank" IRI="http://resource.geosciml.org/ontology/timescale/rank/"/>
+    <Prefix name="rdf1" IRI="http://www.cropontology.org/rdf/"/>
+    <Prefix name="rdfa" IRI="http://www.w3.org/ns/rdfa/"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema/"/>
+    <Prefix name="rico" IRI="http://www.ica.org/standards/RiC/ontology/"/>
+    <Prefix name="rlog" IRI="http://persistence.uni-leipzig.org/nlp2rdf/ontologies/rlog/"/>
+    <Prefix name="role" IRI="http://www.estrellaproject.org/lkif-core/role.owl/"/>
+    <Prefix name="saro" IRI="http://w3id.org/saro/"/>
+    <Prefix name="sctm" IRI="http://snomed.info/sct/subset/"/>
+    <Prefix name="seas" IRI="https://w3id.org/seas/"/>
+    <Prefix name="sika" IRI="http://ontology.sika.com/"/>
+    <Prefix name="sioc" IRI="http://rdfs.org/sioc/ns/"/>
+    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core/"/>
+    <Prefix name="snap" IRI="http://www.ifomis.org/bfo/1.1/snap/"/>
+    <Prefix name="sosa" IRI="http://www.w3.org/ns/sosa/"/>
+    <Prefix name="span" IRI="http://www.ifomis.org/bfo/1.1/span/"/>
+    <Prefix name="spdx" IRI="http://spdx.org/rdf/terms/"/>
+    <Prefix name="spin" IRI="http://spinrdf.org/spin/"/>
+    <Prefix name="stat" IRI="http://lubm.shacl.stat.io/"/>
+    <Prefix name="sth1" IRI="https://www.oscinema.com.sg/cinema/Week/theme1/Screen3/slot1/"/>
+    <Prefix name="sth2" IRI="https://www.oscinema.com.sg/cinema/Week/theme2/Screen3/slot2/"/>
+    <Prefix name="sth3" IRI="https://www.oscinema.com.sg/cinema/Week/theme3/Screen3/slot3/"/>
+    <Prefix name="svpr" IRI="http://www.specialprivacy.eu/vocabs/processing/"/>
+    <Prefix name="svpu" IRI="http://www.specialprivacy.eu/vocabs/purposes/"/>
+    <Prefix name="swrl" IRI="http://www.w3.org/2003/11/swrl/"/>
+    <Prefix name="tags" IRI="http://www.holygoat.co.uk/owl/redwood/0.1/tags/"/>
+    <Prefix name="this" IRI="urn:IEEE-1641:2010:DigitalTSFLib"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time/"/>
+    <Prefix name="tran" IRI="http://www.opengis.net/citygml/transportation/2.0/"/>
+    <Prefix name="ucum" IRI="http://purl.oclc.org/NET/muo/ucum/"/>
+    <Prefix name="umls" IRI="http://bioportal.bioontology.org/ontologies/umls/"/>
+    <Prefix name="unit" IRI="http://qudt.org/vocab/unit/"/>
+    <Prefix name="univ" IRI="http://www.indoversitas.id/"/>
+    <Prefix name="vaem" IRI="http://www.linkedmodel.org/schema/vaem/"/>
+    <Prefix name="vann" IRI="http://purl.org/vocab/vann/"/>
+    <Prefix name="vivo" IRI="http://purl.org/roh/mirror/vivo/"/>
+    <Prefix name="voaf" IRI="http://purl.org/vocommons/voaf/"/>
+    <Prefix name="voag" IRI="http://voag.linkedmodel.org/schema/voag/"/>
+    <Prefix name="void" IRI="http://rdfs.org/ns/void/"/>
+    <Prefix name="wdrs" IRI="http://www.w3.org/2007/05/powder-s/"/>
+    <Prefix name="xkos" IRI="http://rdf-vocabulary.ddialliance.org/xkos/"/>
+    <Prefix name="yago" IRI="http://dbpedia.org/class/yago/"/>
+    <Prefix name="AWMAS" IRI="http://www.semanticweb.org/AWMAS/"/>
+    <Prefix name="a-cat" IRI="https://w3id.org/arco/ontology/catalogue/"/>
+    <Prefix name="a-loc" IRI="https://w3id.org/arco/ontology/location/"/>
+    <Prefix name="admin" IRI="http://webns.net/mvcb/"/>
+    <Prefix name="arjun" IRI="http://lsirwww.epfl.ch/courses/dis/2005ws/exercises/rdf/www/schema.txt"/>
+    <Prefix name="bevon" IRI="http://rdfs.co/bevon/"/>
+    <Prefix name="brick" IRI="https://brickschema.org/schema/1.1/Brick/"/>
+    <Prefix name="capec" IRI="http://purl.org/cyber/capec/"/>
+    <Prefix name="carex" IRI="http://biosemantics.arizona.edu/ontologies/carex/"/>
+    <Prefix name="cesar" IRI="http://www.cesar/"/>
+    <Prefix name="chebi" IRI="http://purl.obolibrary.org/obo/chebi/"/>
+    <Prefix name="clmat" IRI="http://www.nsmntx.org/2019/10/clothingMaterials/"/>
+    <Prefix name="conn2" IRI="https://aastat.gov.de/connector/conn2/"/>
+    <Prefix name="core1" IRI="http://purl.obolibrary.org/obo/core/"/>
+    <Prefix name="core2" IRI="http://purl.obolibrary.org/obo/core/"/>
+    <Prefix name="core3" IRI="http://purl.obolibrary.org/obo/core/"/>
+    <Prefix name="crmpc" IRI="http://www.cidoc-crm.org/crm_property_classes/"/>
+    <Prefix name="datex" IRI="http://vocab.datex.org/terms/"/>
+    <Prefix name="dawgt" IRI="http://www.w3.org/2001/sw/DataAccess/tests/test-dawg/"/>
+    <Prefix name="dtype" IRI="http://www.srdc.com.tr/ontmalizer/"/>
+    <Prefix name="esadm" IRI="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/territorio/"/>
+    <Prefix name="esagm" IRI="http://vocab.ciudadesabiertas.es/def/sector-publico/agenda-municipal/"/>
+    <Prefix name="escjr" IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/callejero/"/>
+    <Prefix name="esdir" IRI="http://vocab.linkeddata.es/datosabiertos/def/commons/direccion-postal/"/>
+    <Prefix name="euvoc" IRI="http://publications.europa.eu/ontology/euvoc/"/>
+    <Prefix name="event" IRI="https://onerecord.iata.org/Event/"/>
+    <Prefix name="fabio" IRI="http://purl.org/spar/fabio/"/>
+    <Prefix name="first" IRI="http://www.w3.org/2002/03owlt/AllDifferent/premises001/"/>
+    <Prefix name="foaf1" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="grddl" IRI="http://www.w3.org/2003/g/data-view/"/>
+    <Prefix name="gront" IRI="http://genomic-resources.eu/ontology/"/>
+    <Prefix name="irrig" IRI="http://www.w3id.org/def/irrig/"/>
+    <Prefix name="iswww" IRI="http://sw.edu//"/>
+    <Prefix name="it-MU" IRI="https://w3id.org/italia/onto/MU/"/>
+    <Prefix name="km4cr" IRI="http://www.disit.org/km4city/resource/"/>
+    <Prefix name="legal" IRI="http://www.w3.org/ns/legal/"/>
+    <Prefix name="lemon" IRI="http://lemon-model.net/lemon/"/>
+    <Prefix name="lvont" IRI="http://lexvo.org/ontology/"/>
+    <Prefix name="mereo" IRI="http://www.estrellaproject.org/lkif-core/mereology.owl/"/>
+    <Prefix name="meshv" IRI="http://id.nlm.nih.gov/mesh/vocab/"/>
+    <Prefix name="mondo" IRI="http://purl.obolibrary.org/obo/mondo/"/>
+    <Prefix name="nlowl" IRI="http://www.aueb.gr/users/ion/nlowl/nlowl/"/>
+    <Prefix name="offer" IRI="https://onerecord.iata.org/Offer/"/>
+    <Prefix name="ogcgs" IRI="http://www.opengis.net/ont/geosparql/"/>
+    <Prefix name="ogcsf" IRI="http://www.opengis.net/ont/sf/"/>
+    <Prefix name="omgeo" IRI="http://www.ontotext.com/owlim/geo/"/>
+    <Prefix name="orges" IRI="http://vocab.linkeddata.es/datosabiertos/def/sector-publico/organizacion/"/>
+    <Prefix name="other" IRI="https://onerecord.iata.org/Other/"/>
+    <Prefix name="owl11" IRI="http://www.w3.org/2006/12/owl11/"/>
+    <Prefix name="part1" IRI="https://im.internationaldataspaces.org/participant/part1"/>
+    <Prefix name="piece" IRI="https://onerecord.iata.org/Piece/"/>
+    <Prefix name="pizza" IRI="http://www.co-ode.org/ontologies/pizza/pizza.owl/"/>
+    <Prefix name="place" IRI="http://www.estrellaproject.org/lkif-core/relative-places.owl/"/>
+    <Prefix name="power" IRI="http://purl.oclc.org/NET/muo/ucum/unit/power/"/>
+    <Prefix name="price" IRI="https://onerecord.iata.org/Price/"/>
+    <Prefix name="prism" IRI="http://prismstandard.org/namespaces/basic/2.1/"/>
+    <Prefix name="queso" IRI="http://www.owl-ontologies.com/OntologiaQueso.owl"/>
+    <Prefix name="quest" IRI="http://obda.org/quest/"/>
+    <Prefix name="rdfdf" IRI="http://www.openlinksw.com/virtrdf-data-formats/"/>
+    <Prefix name="saplo" IRI="http://developer.saplo.com/method/text-tags/"/>
+    <Prefix name="saref" IRI="https://w3id.org/saref/"/>
+    <Prefix name="schor" IRI="https://w3id.org/scholarlydata/role/"/>
+    <Prefix name="scovo" IRI="http://purl.org/NET/scovo/"/>
+    <Prefix name="shape" IRI="http://lubm.shacl.io/"/>
+    <Prefix name="skos1" IRI="http://purl.org/roh/mirror/skos/"/>
+    <Prefix name="story" IRI="http://www.example.org/story.owl/"/>
+    <Prefix name="swrla" IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl/"/>
+    <Prefix name="swrlb" IRI="http://www.w3.org/2003/11/swrlb/"/>
+    <Prefix name="swrlx" IRI="http://www.w3.org/2003/11/swrlx/"/>
+    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="thors" IRI="http://resource.geosciml.org/ontology/timescale/thors/"/>
+    <Prefix name="time2" IRI="http://purl.oclc.org/NET/muo/ucum/unit/time/"/>
+    <Prefix name="types" IRI="http://psi.egovpt.org/types/"/>
+    <Prefix name="tzont" IRI="http://www.w3.org/2006/timezone/"/>
+    <Prefix name="vCard" IRI="http://www.w3.org/2001/vcard-rdf/3.0/"/>
+    <Prefix name="value" IRI="https://onerecord.iata.org/Value/"/>
+    <Prefix name="vcard" IRI="http://www.w3.org/2006/vcard/ns/"/>
+    <Prefix name="vitro" IRI="http://vitro.mannlib.cornell.edu/ns/vitro/0.7/"/>
+    <Prefix name="vocab" IRI="http://what.ever.com/"/>
+    <Prefix name="xhtml" IRI="http://www.w3.org/1999/xhtml/"/>
+    <Prefix name="xlink" IRI="http://www.w3.org/1999/xlink"/>
+    <Prefix name="xsl10" IRI="http://www.w3.org/XSL/Transform/1.0"/>
+    <Prefix name="xslwd" IRI="http://www.w3.org/TR/WD-xsl"/>
+    <Prefix name="yahoo" IRI="http://developer.yahoo.com/search/content/V2/contentAnalysis.html/"/>
+    <Prefix name="action" IRI="http://www.estrellaproject.org/lkif-core/action.owl/"/>
+    <Prefix name="arrest" IRI="http://osw2019.com/brichevg/arrest/"/>
+    <Prefix name="bqbiol" IRI="http://biomodels.net/biology-qualifiers/"/>
+    <Prefix name="branch" IRI="https://onerecord.iata.org/Branch/"/>
+    <Prefix name="chebi1" IRI="http://purl.obolibrary.org/obo/chebi/"/>
+    <Prefix name="chebi3" IRI="http://purl.obolibrary.org/obo/chebi/"/>
+    <Prefix name="chebi4" IRI="http://purl.obolibrary.org/obo/chebi/2"/>
+    <Prefix name="chebi5" IRI="http://purl.obolibrary.org/obo/chebi/3"/>
+    <Prefix name="chebi6" IRI="http://purl.obolibrary.org/obo/chebi/1"/>
+    <Prefix name="cocoon" IRI="http://w3id.org/cocoon/v1.0.1/"/>
+    <Prefix name="dcatap" IRI="http://data.europa.eu/r5r/"/>
+    <Prefix name="dctype" IRI="http://purl.org/dc/dcmitype/"/>
+    <Prefix name="demand" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/ontology/demand.owl/"/>
+    <Prefix name="dwciri" IRI="http://rs.tdwg.org/dwc/iri/"/>
+    <Prefix name="edrive" IRI="http://www.festo.com/edrive/"/>
+    <Prefix name="entsoe" IRI="http://entsoe.eu/CIM/SchemaExtension/3/1/"/>
+    <Prefix name="family" IRI="http://www.di.uoa.gr/tg/family.owl/"/>
+    <Prefix name="fhircs" IRI="http://hl7.org/fhir/cs/"/>
+    <Prefix name="fhirvs" IRI="http://hl7.org/fhir/ValueSet/"/>
+    <Prefix name="flight" IRI="http://www.project-best.eu/owl/airm-mod/flight.owl/"/>
+    <Prefix name="frbroo" IRI="http://iflastandards.info/ns/fr/frbr/frbroo/"/>
+    <Prefix name="geowgs" IRI="http://www.w3.org/2003/01/geo/wgs84_pos/"/>
+    <Prefix name="hsapdv" IRI="http://purl.obolibrary.org/obo/hsapdv/"/>
+    <Prefix name="lcc-cr" IRI="https://www.omg.org/spec/LCC/Countries/CountryRepresentation/"/>
+    <Prefix name="length" IRI="http://purl.oclc.org/NET/muo/ucum/unit/length/"/>
+    <Prefix name="mathml" IRI="http://www.w3.org/1998/Math/MathML"/>
+    <Prefix name="neoind" IRI="neo4j://individuals/"/>
+    <Prefix name="neovoc" IRI="neo4j://vocabulary/"/>
+    <Prefix name="object" IRI="http://www.mistea.supagro.inra.fr/object/"/>
+    <Prefix name="ogcgml" IRI="http://www.opengis.net/ont/gml/"/>
+    <Prefix name="ogcgsf" IRI="http://www.opengis.net/def/function/geosparql/"/>
+    <Prefix name="ogcgsr" IRI="http://www.opengis.net/def/rule/geosparql/"/>
+    <Prefix name="oldssn" IRI="http://purl.oclc.org/NET/ssnx/ssn/"/>
+    <Prefix name="ombibo" IRI="http://www.wurvoc.org/bibliography/om-2/"/>
+    <Prefix name="patent" IRI="http://data.epo.org/linked-data/def/patent/"/>
+    <Prefix name="people" IRI="http://www.outreach.io/people/"/>
+    <Prefix name="person" IRI="https://onerecord.iata.org/Person/"/>
+    <Prefix name="prefix" IRI="http://purl.oclc.org/NET/muo/ucum/prefix/"/>
+    <Prefix name="qudtqk" IRI="http://qudt.org/vocab/quantitykind/"/>
+    <Prefix name="radion" IRI="http://www.w3.org/ns/radion/"/>
+    <Prefix name="ranges" IRI="https://onerecord.iata.org/Ranges/"/>
+    <Prefix name="rating" IRI="https://onerecord.iata.org/Rating/"/>
+    <Prefix name="recipe" IRI="https://schema.org/Recipe/"/>
+    <Prefix name="roapit" IRI="https://w3id.org/italia/onto/RO/"/>
+    <Prefix name="ruleml" IRI="http://www.w3.org/2003/11/ruleml/"/>
+    <Prefix name="schema" IRI="https://schema.org/"/>
+    <Prefix name="sesame" IRI="http://www.openrdf.org/schema/sesame/"/>
+    <Prefix name="skosxl" IRI="http://www.w3.org/2008/05/skos-xl/"/>
+    <Prefix name="smapit" IRI="https://w3id.org/italia/onto/SM/"/>
+    <Prefix name="status" IRI="http://www.w3.org/2003/06/sw-vocab-status/ns/"/>
+    <Prefix name="terms1" IRI="http://www.geneontology.org/formats/oboInOwl/http://purl.org/dc/terms/"/>
+    <Prefix name="tiapit" IRI="https://w3id.org/italia/onto/TI/"/>
+    <Prefix name="ubprop" IRI="http://purl.obolibrary.org/obo/ubprop/"/>
+    <Prefix name="upwork" IRI="http://upwork.com/upwork/"/>
+    <Prefix name="victim" IRI="http://osw2019.com/brichevg/victim/"/>
+    <Prefix name="vienna" IRI="http://semtech.eliasladenburger.com/vienna/"/>
+    <Prefix name="vision" IRI="https://oci.oracle.com/vision/"/>
+    <Prefix name="w3cgeo" IRI="http://www.w3.org/2003/01/geo/wgs84_pos/"/>
+    <Prefix name="TestTDO" IRI="http://www.semanticweb.org/ontologies/2020/TestTDO.owl/"/>
+    <Prefix name="address" IRI="https://onerecord.iata.org/Address/"/>
+    <Prefix name="arvalis" IRI="http://www.ontology.irstea.fr/arvalis/"/>
+    <Prefix name="booking" IRI="https://onerecord.iata.org/Booking/"/>
+    <Prefix name="bqmodel" IRI="http://biomodels.net/model-qualifiers/"/>
+    <Prefix name="clvapit" IRI="https://w3id.org/italia/onto/CLV/"/>
+    <Prefix name="collect" IRI="https://onerecord.iata.org/Collect/"/>
+    <Prefix name="company" IRI="https://onerecord.iata.org/Company/"/>
+    <Prefix name="concept" IRI="http://sw.opencyc.org/concept/"/>
+    <Prefix name="contact" IRI="http://www.w3.org/2000/10/swap/pim/contact/"/>
+    <Prefix name="cooking" IRI="http://www.semanticweb.org/learningcooking/ontologies/2019/1/Cooking/"/>
+    <Prefix name="country" IRI="https://onerecord.iata.org/Country/"/>
+    <Prefix name="covapit" IRI="https://w3id.org/italia/onto/COV/"/>
+    <Prefix name="cpvapit" IRI="https://w3id.org/italia/onto/CPV/"/>
+    <Prefix name="customs" IRI="https://onerecord.iata.org/Customs/"/>
+    <Prefix name="dbpedia" IRI="http://dbpedia.org/resource/"/>
+    <Prefix name="dbpprop" IRI="http://dbpedia.org/property/"/>
+    <Prefix name="dcterms" IRI="http://purl.org/dc/terms/"/>
+    <Prefix name="demands" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/demands.rdf/"/>
+    <Prefix name="devices" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/5g_devices.rdf/"/>
+    <Prefix name="efrbroo" IRI="http://erlangen-crm.org/efrbroo/"/>
+    <Prefix name="esequip" IRI="http://vocab.linkeddata.es/datosabiertos/def/urbanismo-infraestructuras/equipamiento/"/>
+    <Prefix name="example" IRI="http://www.example.com/"/>
+    <Prefix name="exterms" IRI="http://example.org/stuff/1.0/"/>
+    <Prefix name="icom_ac" IRI="http://docs.oasis-open.org/ns/icom/accesscontrol/201008/"/>
+    <Prefix name="isidore" IRI="http://isidore.science/class/"/>
+    <Prefix name="iso-trs" IRI="http://def.isotc211.org/iso19108/2006/TemporalReferenceSystem/"/>
+    <Prefix name="iso3166" IRI="http://downlode.org/rdf/iso-3166/countries/"/>
+    <Prefix name="isoform" IRI="http://purl.uniprot.org/isoforms/"/>
+    <Prefix name="isothes" IRI="http://purl.org/iso25964/skos-thes/"/>
+    <Prefix name="it-Lang" IRI="https://w3id.org/italia/onto/Language/"/>
+    <Prefix name="journal" IRI="http://www.journals.elsevier.com/"/>
+    <Prefix name="lexinfo" IRI="http://www.lexinfo.net/ontology/2.0/lexinfo/"/>
+    <Prefix name="license" IRI="http://www.ebi.ac.uk/swo/license/"/>
+    <Prefix name="old-ssn" IRI="http://purl.oclc.org/NET/ssnx/ssn/"/>
+    <Prefix name="onemtom" IRI="http://www.onem2m.org/ontology/Base_Ontology/base_ontology/"/>
+    <Prefix name="ontolex" IRI="http://www.w3.org/ns/lemon/ontolex/"/>
+    <Prefix name="ontoneo" IRI="http://purl.obolibrary.org/obo/ontoneo/"/>
+    <Prefix name="open311" IRI="http://ontology.eil.utoronto.ca/open311/"/>
+    <Prefix name="openEHR" IRI="https://specifications.openehr.org/releases/RM/latest/ehr.html/_"/>
+    <Prefix name="opencyc" IRI="http://sw.opencyc.org/concept/"/>
+    <Prefix name="owl2xml" IRI="http://www.w3.org/2006/12/owl2-xml/"/>
+    <Prefix name="potapit" IRI="https://w3id.org/italia/onto/POT/"/>
+    <Prefix name="prepaid" IRI="https://onerecord.iata.org/Prepaid/"/>
+    <Prefix name="process" IRI="http://www.estrellaproject.org/lkif-core/process.owl/"/>
+    <Prefix name="product" IRI="https://onerecord.iata.org/Product/"/>
+    <Prefix name="protege" IRI="http://protege.stanford.edu/plugins/owl/protege/"/>
+    <Prefix name="protseq" IRI="http://purl.org/science/protein/bysequence/"/>
+    <Prefix name="ratings" IRI="https://onerecord.iata.org/Ratings/"/>
+    <Prefix name="routing" IRI="https://onerecord.iata.org/Routing/"/>
+    <Prefix name="semtech" IRI="http://semtech.eliasladenburger.com//"/>
+    <Prefix name="skos-xl" IRI="http://www.w3.org/2008/05/skos-xl/"/>
+    <Prefix name="spatial" IRI="http://geovocab.org/spatial/"/>
+    <Prefix name="subsets" IRI="http://purl.obolibrary.org/obo/ro/subsets/"/>
+    <Prefix name="transit" IRI="http://vocab.org/transit/terms/"/>
+    <Prefix name="uneskos" IRI="http://purl.org/umu/uneskos/"/>
+    <Prefix name="uniprot" IRI="http://purl.uniprot.org/core/"/>
+    <Prefix name="usdl-br" IRI="http://www.linked-usdl.org/ns/usdl-business-roles/"/>
+    <Prefix name="usdl-ir" IRI="http://www.linked-usdl.org/ns/usdl-interaction-roles/"/>
+    <Prefix name="usdl-it" IRI="http://www.linked-usdl.org/ns/usdl-interaction-types/"/>
+    <Prefix name="usdl-lr" IRI="http://www.linked-usdl.org/ns/usdl-liability-roles/"/>
+    <Prefix name="virtrdf" IRI="http://www.openlinksw.com/schemas/virtrdf/"/>
+    <Prefix name="waybill" IRI="https://onerecord.iata.org/Waybill/"/>
+    <Prefix name="xsl1999" IRI="http://www.w3.org/1999/XSL/Transform"/>
+    <Prefix name="zemanta" IRI="http://developer.zemanta.com/docs/entity_type/"/>
+    <Prefix name="GConsent" IRI="https://w3id.org/GConsent/"/>
+    <Prefix name="ICCDfoto" IRI="http://dati.beniculturali.it/iccd/fotografico/"/>
+    <Prefix name="LConsent" IRI="https://www.datavillage.me/ontologies/LConsent/"/>
+    <Prefix name="admsapit" IRI="https://w3id.org/italia/onto/ADMS/"/>
+    <Prefix name="arco-res" IRI="https://w3id.org/arco/resource/"/>
+    <Prefix name="carriage" IRI="https://onerecord.iata.org/Carriage/"/>
+    <Prefix name="cellline" IRI="http://www.ebi.ac.uk/cellline/"/>
+    <Prefix name="cidoccrm" IRI="http://purl.org/NET/cidoc-crm/core/"/>
+    <Prefix name="covid-19" IRI="http://www.semanticweb.org/kasun/ontologies/2020/3/covid-19/"/>
+    <Prefix name="cpevapit" IRI="https://w3id.org/italia/onto/CPEV/"/>
+    <Prefix name="cycAnnot" IRI="http://sw.cyc.com/CycAnnotations_v1/"/>
+    <Prefix name="dcmitype" IRI="http://purl.org/dc/dcmitype/"/>
+    <Prefix name="devopsdb" IRI="http://w3id.org/devops-infra/database/"/>
+    <Prefix name="devopsdc" IRI="http://w3id.org/devops-infra/data-center/"/>
+    <Prefix name="devopshw" IRI="http://w3id.org/devops-infra/hardware/"/>
+    <Prefix name="devopssw" IRI="http://w3id.org/devops-infra/software/"/>
+    <Prefix name="elements" IRI="http://www.geneontology.org/formats/oboInOwl/http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="focudata" IRI="http://focu.io/data/"/>
+    <Prefix name="fraction" IRI="http://purl.oclc.org/NET/muo/ucum/unit/fraction/"/>
+    <Prefix name="freebase" IRI="http://rdf.freebase.com/ns/"/>
+    <Prefix name="geonames" IRI="http://www.geonames.org/ontology/ontology_v3.1.rdf/"/>
+    <Prefix name="gleif-ra" IRI="https://www.gleif.org/ontology/RegistrationAuthority/"/>
+    <Prefix name="handling" IRI="https://onerecord.iata.org/Handling/"/>
+    <Prefix name="icom_cal" IRI="http://docs.oasis-open.org/ns/icom/calendar/201008/"/>
+    <Prefix name="icom_doc" IRI="http://docs.oasis-open.org/ns/icom/document/201008/"/>
+    <Prefix name="icom_msg" IRI="http://docs.oasis-open.org/ns/icom/message/201008/"/>
+    <Prefix name="icontact" IRI="http://ontology.eil.utoronto.ca/icontact.owl/"/>
+    <Prefix name="interval" IRI="http://reference.data.gov.uk/def/intervals/"/>
+    <Prefix name="iot-lite" IRI="http://purl.oclc.org/NET/UNIS/fiware/iot-lite/"/>
+    <Prefix name="iso-thes" IRI="http://purl.org/iso25964/skos-thes/"/>
+    <Prefix name="lci_ingr" IRI="http//www.lacucinaitaliana.com/ingredients/"/>
+    <Prefix name="location" IRI="https://onerecord.iata.org/Location/"/>
+    <Prefix name="mco-core" IRI="urn:mpeg:mpeg21:mco:core:2015/"/>
+    <Prefix name="mesh2020" IRI="http://id.nlm.nih.gov/mesh/2020/"/>
+    <Prefix name="metadata" IRI="http://data.bioontology.org/metadata/"/>
+    <Prefix name="mydomain" IRI="http://www.mydomain.org/my-rdf-ns"/>
+    <Prefix name="oboInOwl" IRI="http://www.geneontology.org/formats/oboInOwl/"/>
+    <Prefix name="ontology" IRI="http://dbpedia.org/ontology/"/>
+    <Prefix name="otherOnt" IRI="http://example.org/otherOntologies/families/"/>
+    <Prefix name="owl11xml" IRI="http://www.w3.org/2006/12/owl11-xml/"/>
+    <Prefix name="patterns" IRI="http://www.co-ode.org/patterns/"/>
+    <Prefix name="pressure" IRI="http://purl.oclc.org/NET/muo/ucum/unit/pressure/"/>
+    <Prefix name="research" IRI="http://xmlns.com/foaf/0.1/"/>
+    <Prefix name="semitags" IRI="http://ner2.lmcloud.vse.cz/SemiTags/app/static/types/"/>
+    <Prefix name="semspect" IRI="http://derivo.de/semspect/"/>
+    <Prefix name="shipment" IRI="https://onerecord.iata.org/Shipment/"/>
+    <Prefix name="temporal" IRI="http://swrl.stanford.edu/ontologies/built-ins/3.3/temporal.owl/"/>
+    <Prefix name="timezone" IRI="http://www.w3.org/2006/timezone/"/>
+    <Prefix name="virtcxml" IRI="http://www.openlinksw.com/schemas/virtcxml/"/>
+    <Prefix name="wgs84pos" IRI="http://www.w3.org/2003/01/geo/wgs84_pos/"/>
+    <Prefix name="wikidata" IRI="http://www.wikidata.org/entity/"/>
+    <Prefix name="wikimeta" IRI="http://www.wikimeta.com/"/>
+    <Prefix name="yago-res" IRI="http://yago-knowledge.org/resource/"/>
+    <Prefix name="F21BD-CW2" IRI="http://www.semanticweb.org/katja/F21BD-CW2/"/>
+    <Prefix name="NCBITaxon" IRI="http://purl.obolibrary.org/obo/NCBITaxon/"/>
+    <Prefix name="archimate" IRI="http://bp4mc2.org/def/archimate/"/>
+    <Prefix name="beautiful" IRI="beautiful/"/>
+    <Prefix name="bsbm-inst" IRI="http://www4.wiwiss.fu-berlin.de/bizer/bsbm/v01/instances/"/>
+    <Prefix name="commodity" IRI="https://onerecord.iata.org/Commodity/"/>
+    <Prefix name="devopskos" IRI="http://w3id.org/devops-infra/kos/"/>
+    <Prefix name="devopsnet" IRI="http://w3id.org/devops-infra/network/"/>
+    <Prefix name="devopsorg" IRI="http://w3id.org/devops-infra/organisation/"/>
+    <Prefix name="dmsgmeter" IRI="http://www.ontodata.xyz/ontologies/dmsgmeter/"/>
+    <Prefix name="extractiv" IRI="http://wiki.extractiv.com/w/page/29179775/Entity-Extraction/"/>
+    <Prefix name="frbr_core" IRI="http://purl.org/vocab/frbr/core/"/>
+    <Prefix name="icom_card" IRI="http://docs.oasis-open.org/ns/icom/contact/201008/"/>
+    <Prefix name="icom_conf" IRI="http://docs.oasis-open.org/ns/icom/conference/201008/"/>
+    <Prefix name="icom_core" IRI="http://docs.oasis-open.org/ns/icom/core/201008/"/>
+    <Prefix name="icom_meta" IRI="http://docs.oasis-open.org/ns/icom/metadata/201008/"/>
+    <Prefix name="icom_task" IRI="http://docs.oasis-open.org/ns/icom/task/201008/"/>
+    <Prefix name="idsc_auth" IRI="https://w3id.org/idsa/code/auth/"/>
+    <Prefix name="idsc_cert" IRI="https://w3id.org/idsa/code/certification/"/>
+    <Prefix name="idsc_prot" IRI="https://w3id.org/idsa/protocol/"/>
+    <Prefix name="insurance" IRI="https://onerecord.iata.org/Insurance/"/>
+    <Prefix name="interface" IRI="http://www.ebi.ac.uk/swo/interface/"/>
+    <Prefix name="naics2007" IRI="http://linkedmodel.org/vocab/industry-codes/naics-2007/"/>
+    <Prefix name="ncbitaxon" IRI="http://purl.obolibrary.org/obo/ncbitaxon/"/>
+    <Prefix name="oboInOwl1" IRI="www.geneontology.org/formats/oboInOwl/"/>
+    <Prefix name="ontodebug" IRI="http://ainf.aau.at/ontodebug/"/>
+    <Prefix name="ontology1" IRI="http://dilvanlab.github.io/omop-cdm/ontology/"/>
+    <Prefix name="paradicms" IRI="http://www.paradicms.org/ns/"/>
+    <Prefix name="qudt-unit" IRI="http://qudt.org/1.1/vocab/unit/"/>
+    <Prefix name="sctbridge" IRI="http://hl7.org/fhir_SCTBridge/"/>
+    <Prefix name="skos-thes" IRI="http://purl.org/iso25964/skos-thes/"/>
+    <Prefix name="uniprotkb" IRI="https://www.uniprot.org/uniprot/"/>
+    <Prefix name="usdl-core" IRI="http://www.linked-usdl.org/ns/usdl-core/"/>
+    <Prefix name="vcard2006" IRI="http://www.w3.org/2006/vcard/ns/"/>
+    <Prefix name="wgs84_pos" IRI="http://www.w3.org/2003/01/geo/wgs84_pos/"/>
+    <Prefix name="5g_devices" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/compact/5g_devices.rdf/"/>
+    <Prefix name="DOLCE-Lite" IRI="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl/"/>
+    <Prefix name="Vocabulary" IRI="https://standards.oftrust.net/v2/Vocabulary/"/>
+    <Prefix name="airWaybill" IRI="https://onerecord.iata.org/AirWaybill/"/>
+    <Prefix name="alchemyapi" IRI="http://www.alchemyapi.com/api/entity/types.html/"/>
+    <Prefix name="aliexpress" IRI="aliexpress.com:"/>
+    <Prefix name="dbpedia-fr" IRI="http://fr.dbpedia.org/resource/"/>
+    <Prefix name="dbpedia-it" IRI="http://it.dbpedia.org/resource/"/>
+    <Prefix name="dbpedia-pl" IRI="http://pl.dbpedia.org/resource/"/>
+    <Prefix name="dbpedia-pt" IRI="http://pt.dbpedia.org/resource/"/>
+    <Prefix name="devopscert" IRI="http://w3id.org/devops-infra/certificate/"/>
+    <Prefix name="devopscore" IRI="http://w3id.org/devops-infra/core/"/>
+    <Prefix name="devopsprod" IRI="http://w3id.org/devops-infra/product/"/>
+    <Prefix name="dimensions" IRI="https://onerecord.iata.org/Dimension/"/>
+    <Prefix name="fiesta-iot" IRI="http://purl.org/iot/ontology/fiesta-iot/"/>
+    <Prefix name="gleif-base" IRI="https://www.gleif.org/ontology/Base/"/>
+    <Prefix name="icom_forum" IRI="http://docs.oasis-open.org/ns/icom/forum/201008/"/>
+    <Prefix name="inventions" IRI="http://www.onto.org/inventions/"/>
+    <Prefix name="keldspizza" IRI="http://www.keld.com/keldspizza/"/>
+    <Prefix name="mohamedbah" IRI="http://www.semanticweb.org/mohamedbah/"/>
+    <Prefix name="mthreelite" IRI="http://purl.org/iot/vocab/m3-lite/"/>
+    <Prefix name="opencalais" IRI="http://www.opencalais.com/documentation/calais-web-service-api/api-metadata/entity-index-and-definitions/"/>
+    <Prefix name="otherParty" IRI="https://onerecord.iata.org/OtherParty/"/>
+    <Prefix name="parameters" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/ontology/parameters.owl/"/>
+    <Prefix name="production" IRI="https://onerecord.iata.org/Production/"/>
+    <Prefix name="recipesrdf" IRI="http://www.semanticweb.org/chris/ontologies/2019/1/Recipe/"/>
+    <Prefix name="saref4agri" IRI="https://w3id.org/def/saref4agri/"/>
+    <Prefix name="ssn-system" IRI="http://www.w3.org/ns/ssn/systems/"/>
+    <Prefix name="usdl-price" IRI="http://www.linked-usdl.org/ns/usdl-price/"/>
+    <Prefix name="vocabulary" IRI="http://www.opensilex.org/vocabulary/oeso/"/>
+    <Prefix name="webprotege" IRI="http://webprotege.stanford.edu/"/>
+    <Prefix name="wn20schema" IRI="http://www.w3.org/2006/03/wn/wn20/schema/"/>
+    <Prefix name="FriOntology" IRI="urn:absolute:FriOntology/"/>
+    <Prefix name="ace_lexicon" IRI="http://attempto.ifi.uzh.ch/ace_lexicon/"/>
+    <Prefix name="aliexpress2" IRI="aliexpress.com:2"/>
+    <Prefix name="aliexpress3" IRI="aliexpress.com:3"/>
+    <Prefix name="aliexpress4" IRI="aliexpress.com:3.5"/>
+    <Prefix name="aliexpress5" IRI="aliexpress.com:4"/>
+    <Prefix name="criticality" IRI="http://hl7.org/fhir/criticality/"/>
+    <Prefix name="customsInfo" IRI="https://onerecord.iata.org/CustomsInfo/"/>
+    <Prefix name="dbpedia-owl" IRI="http://dbpedia.org/ontology/"/>
+    <Prefix name="geolocation" IRI="https://onerecord.iata.org/Geolocation/"/>
+    <Prefix name="mydocuments" IRI="http://example.org/mydocuments/"/>
+    <Prefix name="otherCharge" IRI="https://onerecord.iata.org/OtherCharge/"/>
+    <Prefix name="plane-angle" IRI="http://purl.oclc.org/NET/muo/ucum/unit/plane-angle/"/>
+    <Prefix name="stakeholder" IRI="http://manusquare.project.eu/stakeholders/"/>
+    <Prefix name="tdwgutility" IRI="http://rs.tdwg.org/dwc/terms/attributes/"/>
+    <Prefix name="temperature" IRI="http://purl.oclc.org/NET/muo/ucum/unit/temperature/"/>
+    <Prefix name="upworkModel" IRI="http://upwork.com/upworkModel/"/>
+    <Prefix name="contactOther" IRI="https://onerecord.iata.org/ContactOther/"/>
+    <Prefix name="cpu-unit-ext" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/ontology/cpu-unit-ext.owl/"/>
+    <Prefix name="devopsnetsec" IRI="http://w3id.org/devops-infra/network-security-load-balancing/"/>
+    <Prefix name="devopsrscreq" IRI="http://w3id.org/devops-infra/resource-requirement/"/>
+    <Prefix name="devopsserver" IRI="http://w3id.org/devops-infra/server/"/>
+    <Prefix name="dublincorens" IRI="http://purl.org/dc/elements/1.1/"/>
+    <Prefix name="houseWaybill" IRI="https://onerecord.iata.org/HouseWaybill/"/>
+    <Prefix name="icom_content" IRI="http://docs.oasis-open.org/ns/icom/content/201008/"/>
+    <Prefix name="magnetomodel" IRI="http://www.magneto-h2020.eu/"/>
+    <Prefix name="organization" IRI="http://www.ebi.ac.uk/swo/organization/"/>
+    <Prefix name="owl-modeling" IRI="http://www.semanticweb.org/bernhard/ontologies/2019/10/owl-modeling/"/>
+    <Prefix name="quantitykind" IRI="http://qudt.org/vocab/quantitykind/"/>
+    <Prefix name="quoteRequest" IRI="https://onerecord.iata.org/QuoteRequest/"/>
+    <Prefix name="receivedFrom" IRI="https://onerecord.iata.org/ReceivedFrom/"/>
+    <Prefix name="routed_paths" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/routed_paths.rdf/"/>
+    <Prefix name="securityInfo" IRI="https://onerecord.iata.org/SecurityInfo/"/>
+    <Prefix name="test-rigDemo" IRI="http://www.semanticweb.org/kuegler/ontologies/2017/9/test-rigDemo/"/>
+    <Prefix name="wikipedia-en" IRI="http://en.wikipedia.org/wiki/"/>
+    <Prefix name="PKCR_Aircraft" IRI="http://www.airbus.com/PKCR/Ontology_Aircraft/"/>
+    <Prefix name="WebSemProject" IRI="http://www.semanticweb.org/ontologies/WebSemProject/"/>
+    <Prefix name="base_ontology" IRI="http://www.onem2m.org/ontology/Base_Ontology/base_ontology/"/>
+    <Prefix name="bookingStatus" IRI="https://onerecord.iata.org/BookingStatus/"/>
+    <Prefix name="chargePayment" IRI="https://onerecord.iata.org/ChargePayment/"/>
+    <Prefix name="chargeSummary" IRI="https://onerecord.iata.org/ChargeSummary/"/>
+    <Prefix name="co2CalcMethod" IRI="https://onerecord.iata.org/CO2CalcMethod/"/>
+    <Prefix name="coronaviruses" IRI="http://coronaviruses.rdf/"/>
+    <Prefix name="devopsservice" IRI="http://w3id.org/devops-infra/service/"/>
+    <Prefix name="icom_presence" IRI="http://docs.oasis-open.org/ns/icom/presence/201008/"/>
+    <Prefix name="identifierUse" IRI="http://hl7.org/fhir/identifierUse/"/>
+    <Prefix name="packagingType" IRI="https://onerecord.iata.org/PackagingType/"/>
+    <Prefix name="pieceGrouping" IRI="https://onerecord.iata.org/PieceGrouping/"/>
+    <Prefix name="provswprocess" IRI="http://purl.org/provswprocess/"/>
+    <Prefix name="qudt-unit-1-1" IRI="http://qudt.org/vocab/unit/"/>
+    <Prefix name="quoteResponse" IRI="https://onerecord.iata.org/QuoteResponse/"/>
+    <Prefix name="wn20instances" IRI="http://www.w3.org/2006/03/wn/wn20/instances/"/>
+    <Prefix name="bookingRequest" IRI="https://onerecord.iata.org/BookingRequest/"/>
+    <Prefix name="carrierProduct" IRI="https://onerecord.iata.org/CarrierProduct/"/>
+    <Prefix name="categorization" IRI="https://standards.oftrust.net/v2/Vocabulary/categorization/"/>
+    <Prefix name="characteristic" IRI="https://onerecord.iata.org/Characteristic/"/>
+    <Prefix name="dangerousGoods" IRI="https://onerecord.iata.org/DangerousGoods/"/>
+    <Prefix name="family_example" IRI="https://wiki.csc.calpoly.edu/OntologyTutorial/family_example.owl/"/>
+    <Prefix name="fhir-metamodel" IRI="http://hl7.org/fhir-metamodel/"/>
+    <Prefix name="fhkb_chapter_2" IRI="http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_2.owl/"/>
+    <Prefix name="fhkb_chapter_4" IRI="http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_4.owl/"/>
+    <Prefix name="fhkb_chapter_5" IRI="http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_5.owl/"/>
+    <Prefix name="fhkb_chapter_7" IRI="http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_7.owl/"/>
+    <Prefix name="fhkb_chapter_9" IRI="http://mowl-power.cs.man.ac.uk/fhkbtutorial/ontology/fhkb_chapter_9.owl/"/>
+    <Prefix name="insect-anatomy" IRI="http://purl.obolibrary.org/obo/uberon/insect-anatomy/"/>
+    <Prefix name="learning_style" IRI="https://en.wikipedia.org/wiki/Learning_styles/"/>
+    <Prefix name="routing-domain" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/ontology/routing-domain.owl/"/>
+    <Prefix name="securityStatus" IRI="https://onerecord.iata.org/SecurityStatus/"/>
+    <Prefix name="serviceRequest" IRI="https://onerecord.iata.org/ServiceRequest/"/>
+    <Prefix name="specialService" IRI="https://onerecord.iata.org/SpecialService/"/>
+    <Prefix name="transportMeans" IRI="https://onerecord.iata.org/TransportMeans/"/>
+    <Prefix name="usdl-agreement" IRI="http://www.linked-usdl.org/ns/usdl-agreement/"/>
+    <Prefix name="accessCondition" IRI="https://w3id.org/italia/onto/AccessCondition/"/>
+    <Prefix name="characteristics" IRI="https://onerecord.iata.org/Characteristics/"/>
+    <Prefix name="dbpediaontology" IRI="http://dbpedia.org/ontology/"/>
+    <Prefix name="otherIdentifier" IRI="https://onerecord.iata.org/OtherIdentifier/"/>
+    <Prefix name="specialHandling" IRI="https://onerecord.iata.org/SpecialHandling/"/>
+    <Prefix name="Alternative_Term" IRI="http://www.semanticweb.org/hamide/ontologies/2019/3/untitled-ontology-14/Alternative_Term,"/>
+    <Prefix name="capacity_example" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/capacity_example.rdf/"/>
+    <Prefix name="carrierSignature" IRI="https://onerecord.iata.org/CarrierSignature/"/>
+    <Prefix name="chromosome-parts" IRI="http://purl.obolibrary.org/obo/test/chromosome-parts/"/>
+    <Prefix name="collectionentity" IRI="http://www.ontologydesignpatterns.org/cp/owl/collectionentity.owl/"/>
+    <Prefix name="dbpedia-wikidata" IRI="http://wikidata.dbpedia.org/resource/"/>
+    <Prefix name="einsteins_riddle" IRI="http://persons.iis.nsk.su/files/persons/pages/einsteins_riddle.owl/"/>
+    <Prefix name="narrative-status" IRI="http://hl7.org/fhir/narrative-status/"/>
+    <Prefix name="physical-quality" IRI="http://purl.oclc.org/NET/muo/ucum/physical-quality/"/>
+    <Prefix name="shipperSignature" IRI="https://onerecord.iata.org/ShipperSignature/"/>
+    <Prefix name="traffic-topology" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example3/ethernet-top/traffic-topology.rdf/"/>
+    <Prefix name="transportSegment" IRI="https://onerecord.iata.org/TransportSegment/"/>
+    <Prefix name="upworkOccupation" IRI="http://upwork.com/upworkOccupation/"/>
+    <Prefix name="volumetricWeight" IRI="https://onerecord.iata.org/VolumetricWeight/"/>
+    <Prefix name="chargeDeclaration" IRI="https://onerecord.iata.org/ChargeDeclaration/"/>
+    <Prefix name="chargeDescription" IRI="https://onerecord.iata.org/ChargeDescription/"/>
+    <Prefix name="ebsi-notarisation" IRI="http://www.semanticweb.org/ontologies/2020/2/ebsi-notarisation/1.0.0/"/>
+    <Prefix name="externalReference" IRI="https://onerecord.iata.org/ExternalReference/"/>
+    <Prefix name="process_attribute" IRI="http://purl.obolibrary.org/obo/envo-p/patterns/process_attribute/"/>
+    <Prefix name="sealing_device_v0" IRI="htpps://www.dropbox.com/home/Protege/sealing_device_v0//"/>
+    <Prefix name="transport_network" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example2/transport_network.rdf/"/>
+    <Prefix name="central-government" IRI="http://reference.data.gov.uk/def/central-government/"/>
+    <Prefix name="cpannotationschema" IRI="http://www.ontologydesignpatterns.org/schemas/cpannotationschema.owl/"/>
+    <Prefix name="restaurantontology" IRI="http://example.org/RestaurantOntology.owl/"/>
+    <Prefix name="transport-topology" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example3/ethernet-top/transport-topology.rdf/"/>
+    <Prefix name="wikipedia-aircraft" IRI="http://www.industrialsemantics.com/ontologies/2010/0/22/wikipedia-aircraft.owl/"/>
+    <Prefix name="AditiMoviesOntology" IRI="http://www.semanticweb.org/mayan/ontologies/2020/3/AditiMoviesOntology/"/>
+    <Prefix name="quantity-comparator" IRI="http://hl7.org/fhir/quantity-comparator/"/>
+    <Prefix name="spatialDescriptions" IRI="http://publications.europa.eu/ontology/euvoc/spatialDescriptions/"/>
+    <Prefix name="untitled-ontology-2" IRI="http://www.semanticweb.org/x473936/ontologies/2020/0/untitled-ontology-2/"/>
+    <Prefix name="untitled-ontology-3" IRI="http://www.semanticweb.org/acer/ontologies/2020/3/untitled-ontology-3/"/>
+    <Prefix name="untitled-ontology-4" IRI="http://www.semanticweb.org/sarthak/ontologies/2020/9/untitled-ontology-4/"/>
+    <Prefix name="base_ontology-v0_9_0" IRI="http://www.onem2m.org/ontology/Base_Ontology/base_ontology-v0_9_0/"/>
+    <Prefix name="temporalDescriptions" IRI="http://publications.europa.eu/ontology/euvoc/temporalDescriptions/"/>
+    <Prefix name="untitled-ontology-11" IRI="http://www.semanticweb.org/erickantonio/ontologies/2020/0/untitled-ontology-11/"/>
+    <Prefix name="untitled-ontology-16" IRI="http://www.semanticweb.org/user/ontologies/2020/2/untitled-ontology-16/"/>
+    <Prefix name="untitled-ontology-17" IRI="http://www.semanticweb.org/debanjalibain/ontologies/2020/3/untitled-ontology-17/"/>
+    <Prefix name="untitled-ontology-75" IRI="http://www.semanticweb.org/kuegler/ontologies/2017/9/untitled-ontology-75/"/>
+    <Prefix name="untitled-ontology-83" IRI="http://www.semanticweb.org/dr.soniamehla/ontologies/2016/7/untitled-ontology-83/"/>
+    <Prefix name="inDestinationCurrency" IRI="https://onerecord.iata.org/InDestinationCurrency/"/>
+    <Prefix name="oKIG019UCNY0YUCMakmuV" IRI="http://webprotege.stanford.edu/project/7oKIG019UCNY0YUCMakmuV/"/>
+    <Prefix name="untitled-ontology-186" IRI="http://www.semanticweb.org/kainatansar/ontologies/2020/0/untitled-ontology-186/"/>
+    <Prefix name="visualization4ExtruOnt" IRI="http://bdi.si.ehu.es/bdi/ontologies/ExtruOnt/visualization4ExtruOnt/"/>
+    <Prefix name="medication-order-status" IRI="http://hl7.org/fhir/medication-order-status/"/>
+    <Prefix name="otherCustomsInformation" IRI="https://onerecord.iata.org/OtherCustomsInformation/"/>
+    <Prefix name="AfricanWildlifeOntology1" IRI="http://www.meteck.org/teaching/OEbook/ontologies/AfricanWildlifeOntology1.owl/"/>
+    <Prefix name="allergy-intolerance-type" IRI="http://hl7.org/fhir/allergy-intolerance-type/"/>
+    <Prefix name="home-activities-ontology" IRI="http://www.semanticweb.org/kass/ontologies/2020/0/home-activities-ontology/"/>
+    <Prefix name="reasonsForSecurityStatus" IRI="https://onerecord.iata.org/ReasonsForSecurityStatus/"/>
+    <Prefix name="premises-connect-topology" IRI="https://cntic10.hit.bme.hu/do/network_model/raw/master/examples/example3/ethernet-top/premises-connect-topology.rdf/"/>
+    <Prefix name="allergy-intolerance-status" IRI="http://hl7.org/fhir/allergy-intolerance-status/"/>
+    <Prefix name="allergy-intolerance-category" IRI="http://hl7.org/fhir/allergy-intolerance-category/"/>
+    <Prefix name="dto_vocabulary_kinase_domain" IRI="http://www.drugtargetontology.org/dto/dto_vocabulary_kinase_domain.owl/"/>
+    <Prefix name="dto_vocabulary_kinase_domain1" IRI="http://www.drugtargetontology.org/dto/dto_vocabulary_kinase_domain/"/>
+    <Prefix name="allergy-intolerance-criticality" IRI="http://hl7.org/fhir/allergy-intolerance-criticality/"/>
+    <Prefix name="xml4e22437efefd433585f53052a456fc38" IRI="http://www.w3.org/XML/1998/namespace/"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dublincorens:title"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Europeana Data Model (EDM) vocabulary</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">5.2.4</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespacePrefix"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">edm</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:preferredNamespaceUri"/>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">http://www.europeana.eu/schemas/edm/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="research:homepage"/>
+        <IRI>http://pro.europeana.eu/edm-documentation</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dublincorens:modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema/date">2013-05-20</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:changes"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">
+=======
+Changes between ontology file EDM version 5.2.4 (edm, was once EDM-v524-120820)
+and ontology file EDM version 5.2.3 (EDM-v523-120123)
+=======
+1. edm:isShownAt made a sub-property of edm:hasView
+2. added edm:begin and edm:end and their mappings to CRM
+3. added owl:Class declarations added for compatibility with some OWL-DL reasoners (feedback from Pedro Szekely, ISI)
+4. added &quot;of&quot; at the end of the label for edm:isNextInSequence
+5. added vocabulary metadata to follow Linked Open Vocabularies (http://lov.okfn.org/) and ADMS (https://joinup.ec.europa.eu/asset/adms/release/100) guidelines
+6. removed a domain axiom on edm:hasMet
+7. added edm:collectionName and edm:europeanaProxy
+8. removed version number from file name
+9. generalisation of Country, DataProvider and Provider
+10. updated CRM namespace and CRM class and property identifiers
+11. added FRBRoo mappings
+      </Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="voaf:toDoList"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">
+=======
+Remaining TODOs for ontology file EDM version 5.2.4
+=======
+- finish and check FRBRoo mappings according to the recommendations of the EDM-FRBRoo task force. Also include implicit mappings and mappings for elements outside the EDM namespace?
+- try to capture formal cardinality constraints resulting from &quot;Obligation and Occurrence&quot; documentation, which should be attached to non-EDM constructs (esp. ore:Aggregation)
+- continue adding documentation values (skos:scopeNote, skos:example, etc, according to 1.), starting from edm:InformationResource. Add all Europeana examples and rationale notes for non-EDM constructs
+- use specific EDM-doc properties for &quot;rationale&quot; and &quot;obligation and occurrence&quot;. Use skos:definition for &quot;Europeana definition&quot;, skos:example for &quot;Example&quot;, skos:note for &quot;Europeana note&quot;
+      </Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:example"/>
+        <IRI>http://pro.europeana.eu/case-studies-edm</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dcterms:issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema/date">2010-03-25</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="dublincorens:description"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The Europeana Data Model (EDM) is aimed at being an integration medium for collecting, connecting and enriching the descriptions provided by Europeana data providers. The RDF vocabulary for http://www.europeana.eu/schemas/edm/ defines the elements introduced by EDM (as opposed to the ones EDM re-uses from other namespaces).</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="radion:versionNotes"/>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The present specification is based on the document &quot;Definition of the Europeana Data Model elements&quot;, originally edited by Carlo Meghini. It is aligned with the version 5.2.4 of these EDM Definitions.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="adms:relatedWebPage"/>
+        <IRI>http://europeanalabs.eu/wiki/EDMPrototypingTask11</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="vann:example"/>
+        <AbbreviatedIRI>http:data.europeana.eu</AbbreviatedIRI>
+    </Annotation>
+    <Declaration>
+        <Class IRI="Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EuropeanaAggregation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EuropeanaObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="InformationResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NonInformationResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PhysicalThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ProvidedCHO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TimeSpan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WebResource"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ore:Aggregation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="ore:Proxy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="skos:Concept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aggregatedCHO"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="collectionName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="currentLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="europeanaProxy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="happenedAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasView"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="incorporates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isAnnotationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isNextInSequence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isRepresentationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isShownAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isShownBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isSuccessorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="landingPage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="object"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="occurredAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="preview"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="realizes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="rights"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="uri"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="wasPresentAt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="begin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="end"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="ugc"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="frbroo:F8_Event"/>
+        <Class IRI="Event"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="frbroo:F9_Place"/>
+        <Class IRI="Place"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="abc:Place"/>
+        <Class IRI="Place"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="abc:Temporality"/>
+        <Class IRI="Event"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="abc:Time"/>
+        <Class IRI="TimeSpan"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="frbr_core:Event"/>
+        <Class IRI="Event"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class abbreviatedIRI="frbr_core:Place"/>
+        <Class IRI="Place"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm/E18_Physical_Thing"/>
+        <Class IRI="PhysicalThing"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm/E39_Actor"/>
+        <Class IRI="Agent"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm/E4_Period"/>
+        <Class IRI="Event"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm/E52_Time-Span"/>
+        <Class IRI="TimeSpan"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm/E53_Place"/>
+        <Class IRI="Place"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm/E89_Propositional_Object"/>
+        <Class IRI="InformationResource"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="EuropeanaAggregation"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="aggregatedCHO"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="InformationResource"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="frbroo:F1_Work"/>
+            <Class abbreviatedIRI="frbroo:F2_Expression"/>
+            <Class abbreviatedIRI="frbroo:F3_Manifestation_Product_Type"/>
+            <Class abbreviatedIRI="frbroo:F4_Manifestation_Singleton"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="InformationResource"/>
+        <ObjectUnionOf>
+            <Class abbreviatedIRI="frbr_core:Expression"/>
+            <Class abbreviatedIRI="frbr_core:Manifestation"/>
+            <Class abbreviatedIRI="frbr_core:Work"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="NonInformationResource"/>
+        <ObjectComplementOf>
+            <Class IRI="InformationResource"/>
+        </ObjectComplementOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Place"/>
+        <Class abbreviatedIRI="DOLCE-Lite:space-region"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="TimeSpan"/>
+        <Class abbreviatedIRI="DOLCE-Lite:time-interval"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="Agent"/>
+        <Class IRI="NonInformationResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EuropeanaAggregation"/>
+        <Class IRI="EuropeanaObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EuropeanaAggregation"/>
+        <Class abbreviatedIRI="ore:Aggregation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EuropeanaObject"/>
+        <Class IRI="WebResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <Class IRI="NonInformationResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="happenedAt"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PhysicalThing"/>
+        <Class IRI="NonInformationResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <Class IRI="NonInformationResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ProvidedCHO"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="aggregatedCHO"/>
+            </ObjectInverseOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSpan"/>
+        <Class abbreviatedIRI="dcterms:PeriodOfTime"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSpan"/>
+        <Class IRI="NonInformationResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WebResource"/>
+        <Class IRI="InformationResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="skos:Concept"/>
+        <Class IRI="NonInformationResource"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI="research:Organization"/>
+        <NamedIndividual abbreviatedIRI="http:europeana.eu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="research:Person"/>
+        <NamedIndividual IRI="http://data.semanticweb.org/person/antoine-isaac"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="voaf:Vocabulary"/>
+        <NamedIndividual IRI=""/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="research:Person"/>
+        <NamedIndividual IRI="http://www.ibi.hu-berlin.de/institut/personen/iwanowa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="research:Person"/>
+        <NamedIndividual IRI="http://www.ics.forth.gr/isl/people/people_individual.jsp?Person_ID=2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="research:Person"/>
+        <NamedIndividual IRI="http://www.image.ece.ntua.gr/~ndroso/"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="research:Person"/>
+        <NamedIndividual IRI="http://www.image.ntua.gr/~tzouvaras/"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="research:Organization"/>
+        <AnonymousIndividual nodeID="_:genid14128085"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI="research:Person"/>
+        <AnonymousIndividual nodeID="_:genid14128086"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dublincorens:contributor"/>
+        <NamedIndividual IRI=""/>
+        <AnonymousIndividual nodeID="_:genid14128085"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dublincorens:contributor"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.ics.forth.gr/isl/people/people_individual.jsp?Person_ID=2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dublincorens:contributor"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.image.ece.ntua.gr/~ndroso/"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dublincorens:contributor"/>
+        <NamedIndividual IRI=""/>
+        <AnonymousIndividual nodeID="_:genid14128086"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dublincorens:contributor"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.image.ntua.gr/~tzouvaras/"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dublincorens:contributor"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.ibi.hu-berlin.de/institut/personen/iwanowa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dublincorens:creator"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://data.semanticweb.org/person/antoine-isaac"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI="dublincorens:publisher"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual abbreviatedIRI="http:europeana.eu"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dublincorens:contributor"/>
+        <ObjectProperty IRI="hasMet"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dublincorens:coverage"/>
+        <ObjectProperty IRI="hasMet"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dublincorens:creator"/>
+        <ObjectProperty IRI="hasMet"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dublincorens:date"/>
+        <ObjectProperty IRI="hasMet"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dublincorens:format"/>
+        <ObjectProperty IRI="hasType"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dublincorens:language"/>
+        <ObjectProperty IRI="hasType"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dublincorens:publisher"/>
+        <ObjectProperty IRI="hasMet"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dublincorens:source"/>
+        <ObjectProperty IRI="isDerivativeOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dublincorens:type"/>
+        <ObjectProperty IRI="hasType"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dcterms:hasFormat"/>
+        <ObjectInverseOf>
+            <ObjectProperty IRI="isDerivativeOf"/>
+        </ObjectInverseOf>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dcterms:hasVersion"/>
+        <ObjectInverseOf>
+            <ObjectProperty IRI="isDerivativeOf"/>
+        </ObjectInverseOf>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dcterms:isFormatOf"/>
+        <ObjectProperty IRI="isDerivativeOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dcterms:isReplacedBy"/>
+        <ObjectInverseOf>
+            <ObjectProperty IRI="isDerivativeOf"/>
+        </ObjectInverseOf>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dcterms:isVersionOf"/>
+        <ObjectProperty IRI="isDerivativeOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dcterms:replaces"/>
+        <ObjectProperty IRI="isDerivativeOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI="dcterms:tableOfContents"/>
+        <ObjectProperty IRI="hasView"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="aggregatedCHO"/>
+        <ObjectProperty abbreviatedIRI="dublincorens:subject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="aggregatedCHO"/>
+        <ObjectProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm/P129_is_about"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="aggregatedCHO"/>
+        <ObjectProperty abbreviatedIRI="ore:aggregates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="currentLocation"/>
+        <ObjectProperty abbreviatedIRI="dcterms:spatial"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="happenedAt"/>
+        <ObjectProperty abbreviatedIRI="dublincorens:relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasMet"/>
+        <ObjectProperty abbreviatedIRI="dublincorens:relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasView"/>
+        <ObjectProperty abbreviatedIRI="ore:aggregates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="incorporates"/>
+        <ObjectProperty IRI="isSimilarTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isAnnotationOf"/>
+        <ObjectProperty abbreviatedIRI="dublincorens:subject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isAnnotationOf"/>
+        <ObjectProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm/P67_refers_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isDerivativeOf"/>
+        <ObjectProperty IRI="isSimilarTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isNextInSequence"/>
+        <ObjectProperty abbreviatedIRI="dublincorens:relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isRepresentationOf"/>
+        <ObjectProperty abbreviatedIRI="dublincorens:subject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isRepresentationOf"/>
+        <ObjectProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm/P138_represents"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isShownAt"/>
+        <ObjectProperty IRI="hasView"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isShownBy"/>
+        <ObjectProperty IRI="hasView"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isSimilarTo"/>
+        <ObjectProperty abbreviatedIRI="dublincorens:relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isSuccessorOf"/>
+        <ObjectProperty IRI="isSimilarTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="landingPage"/>
+        <ObjectProperty abbreviatedIRI="ore:aggregates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="object"/>
+        <ObjectProperty IRI="hasView"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="occurredAt"/>
+        <ObjectProperty abbreviatedIRI="dublincorens:relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="preview"/>
+        <ObjectProperty IRI="hasView"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="provider"/>
+        <ObjectProperty IRI="hasMet"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="wasPresentAt"/>
+        <ObjectProperty abbreviatedIRI="dublincorens:relation"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aggregatedCHO"/>
+        <Class abbreviatedIRI="ore:Aggregation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="currentLocation"/>
+        <ObjectUnionOf>
+            <Class IRI="ProvidedCHO"/>
+            <ObjectIntersectionOf>
+                <Class abbreviatedIRI="ore:Proxy"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="ore:proxyFor"/>
+                    <Class IRI="ProvidedCHO"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="happenedAt"/>
+        <Class IRI="Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasType"/>
+        <ObjectUnionOf>
+            <Class IRI="ProvidedCHO"/>
+            <ObjectIntersectionOf>
+                <Class abbreviatedIRI="ore:Proxy"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="ore:proxyFor"/>
+                    <Class IRI="ProvidedCHO"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasView"/>
+        <Class abbreviatedIRI="ore:Aggregation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isAnnotationOf"/>
+        <Class IRI="EuropeanaObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isRepresentationOf"/>
+        <Class IRI="InformationResource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="occurredAt"/>
+        <Class IRI="Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="realizes"/>
+        <Class IRI="PhysicalThing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="wasPresentAt"/>
+        <ObjectUnionOf>
+            <Class IRI="Agent"/>
+            <Class IRI="InformationResource"/>
+            <Class IRI="PhysicalThing"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="aggregatedCHO"/>
+        <Class IRI="ProvidedCHO"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="currentLocation"/>
+        <Class IRI="Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="dataProvider"/>
+        <Class IRI="Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="happenedAt"/>
+        <Class IRI="Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasType"/>
+        <Class IRI="NonInformationResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasView"/>
+        <Class IRI="WebResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isAnnotationOf"/>
+        <ObjectUnionOf>
+            <Class IRI="ProvidedCHO"/>
+            <ObjectIntersectionOf>
+                <Class abbreviatedIRI="ore:Proxy"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="ore:proxyFor"/>
+                    <Class IRI="ProvidedCHO"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isShownAt"/>
+        <Class IRI="WebResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isShownBy"/>
+        <Class IRI="WebResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="landingPage"/>
+        <Class IRI="WebResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="object"/>
+        <Class IRI="WebResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="occurredAt"/>
+        <Class IRI="TimeSpan"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="preview"/>
+        <Class IRI="WebResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="provider"/>
+        <Class IRI="Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="realizes"/>
+        <Class IRI="InformationResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="wasPresentAt"/>
+        <Class IRI="Event"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="begin"/>
+        <DataProperty IRI="isRelatedTo"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="end"/>
+        <DataProperty IRI="isRelatedTo"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="type"/>
+        <DataProperty abbreviatedIRI="dublincorens:type"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="begin"/>
+        <ObjectUnionOf>
+            <Class IRI="Agent"/>
+            <Class IRI="TimeSpan"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="end"/>
+        <ObjectUnionOf>
+            <Class IRI="Agent"/>
+            <Class IRI="TimeSpan"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="isRelatedTo"/>
+        <ObjectUnionOf>
+            <Class IRI="ProvidedCHO"/>
+            <ObjectIntersectionOf>
+                <Class abbreviatedIRI="ore:Proxy"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty abbreviatedIRI="ore:proxyFor"/>
+                    <Class IRI="ProvidedCHO"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="type"/>
+        <DataOneOf>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">3D</Literal>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">IMAGE</Literal>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">SOUND</Literal>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">TEXT</Literal>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">VIDEO</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="ugc"/>
+        <DataOneOf>
+            <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">TRUE</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="research:name"/>
+        <AbbreviatedIRI>http:europeana.eu</AbbreviatedIRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Europeana</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="research:name"/>
+        <IRI>http://data.semanticweb.org/person/antoine-isaac</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Antoine Isaac</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Agent</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Agent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This class comprises people, either individually or in groups, who have the
+potential to perform intentional actions for which they can be held responsible.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>Agent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Leonardo da Vinci, the British Museum, W3C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>Agent</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Rationale: This class is a domain of edm:wasPresentAt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Europeana Aggregation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The set of resources related to a single Cultural Heritage Object that
+collectively represent that object in Europeana. Such set consists of: all
+descriptions about the object that Europeana collects from (possibly different) content providers, including thumbnails and other forms of abstractions, as well as of the description of the object Europeana builds.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The 56th issue of &quot;Le Temps&quot; is a (different) Cultural Heritage Object represented in Europeana by another EuropeanaAggregation instance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The journal &quot;Le Temps&quot; is a Cultural Heritage Object represented in Europeana by one EuropeanaAggregation instance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The painting Mona Lisa is a Cultural Heritage Object represented in Europeana by one EuropeanaAggregation instance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">An instance of EuropeanaAggregation is created at ingestion time for each different Cultural Heritage Object recognized by Europeana. Such instance is associated to the Cultural Heritage Object that it is about, by the property edm:aggregatedCHO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Obligation and Occurence: The relation between the Cultural Heritage Objects represented in Europeana and the instances of the class EuropeanaAggregation is one-to-one, in the data maintained by Europeana: every Cultural Heritage Object is represented by an instance of EuropeanaAggregation, and every instance of EuropeanaAggregation represent a Cultural Heritage Object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Rationale: This class is used in Europeana to gather in a single conceptual unit all the information about a Cultural Heritage Object, necessary for all operations on these objects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>EuropeanaObject</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Europeana Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>EuropeanaObject</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Any object that is the result of Europeana?s activities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>EuropeanaObject</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">An annotation created by a user through the Europeana portal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>EuropeanaObject</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Any content created by the users through the service made available by Europeana for that purpose</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>EuropeanaObject</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Any instance of the class EuropeanaAggregation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>EuropeanaObject</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Rationale: This class is used to tag objects that are the result of activity of Europeana, and, as such, objects on which Europeana holds rights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">An event is a change &quot;of states in cultural, social or physical systems,
+ regardless of scale, brought about by a series or group of coherent physical,
+cultural, technological or legal phenomena&quot; (E5 Event in CIDOC CRM) or a &quot;set of coherent phenomena or cultural manifestations bounded in time and  space&quot; (E4 Period in CIDOC CRM)
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">the 2nd World War</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">the act of painting Mona Lisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">the change of custody of Mona Lisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Events are identified either by the content provider or by Europeana enrichment at ingestion time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Rationale:This class is a domain of edm:happenedAt and the domain of edm:occurredAt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>InformationResource</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Information Resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>InformationResource</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">An information resource is a resource whose essential characteristics can be conveyed in a single message. It can be associated with a URI, it can have a representation, for example: a text is an InformationResource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NonInformationResource</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Non-Information Resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>NonInformationResource</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">All resources that are not information resources.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PhysicalThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Physical Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>PhysicalThing</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">A persistent physical item such as a painting, a building, a book or a stone.
+Persons are not items. This class represents Cultural Heritage Objects known to Europeana to be physical things (such as Mona Lisa) as well as all physical things Europeana refers to in the descriptions of Cultural Heritage Objects (such as the Rosetta Stone).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Place</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>Place</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">An &quot;extent in space, in particular on the surface of the earth, in the pure sense of physics: independent from temporal phenomena and matter&quot; (CIDOC CRM)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ProvidedCHO</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Provided CHO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>ProvidedCHO</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This class comprises the Cultural Heritage objects that Europeana collects descriptions about.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:example"/>
+        <IRI>ProvidedCHO</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Mona Lisa, Winged Victory of Samothrace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>ProvidedCHO</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This class has been mostly motivated by the need to assign a type to the ?central node? in the EDM pattern, during the ingestion process, related to the XML expression of EDM at that stage. It was especially intended to fit the cases where edm:PhysicalThing  cannot be used as the type of the resource standing for the real-world object (independently of any specific data contributor perspective).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:scopeNote"/>
+        <IRI>ProvidedCHO</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Rationale: This class is the range of edm:aggregatedCHO. A resource of type ProvidedCHO can be the subject of statements using edm:isRelatedTo or any more specific property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TimeSpan</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Time Span</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>TimeSpan</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The class of &quot;abstract temporal extents, in the sense of Galilean physics,
+ having a beginning, an end and a duration&quot; (CIDOC CRM)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WebResource</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Web Resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>WebResource</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Information Resources that have at least one Web Representation and at least
+a URI.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>aggregatedCHO</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Aggregated Cultural Heritage Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>aggregatedCHO</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property associates an ORE aggregation with the cultural heritage object(s) (CHO for short) it is about.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>begin</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Begin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>begin</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property denotes the start date of a period of time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>collectionName</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Collection Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>collectionName</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property holds the collection identifier given to the dataset in Europeana.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>collectionName</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The value of this property is provided by Europeana as part of the ingestion process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>country</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>currentLocation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Current Location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>currentLocation</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The geographic location and/or name of the repository, building, site, or other entity whose boundaries presently include the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>dataProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Data Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>dataProvider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The name or identifier of the organisation who contributes data indirectly to an aggregation service (e.g. Europeana).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>end</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">End</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>end</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property denotes the end date of a period of time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>europeanaProxy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Europeana Proxy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>europeanaProxy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property serves only as a flag to indicate that a proxy is a Europeana proxy (as opposed to a provider proxy).  It is for internal use only.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+        <IRI>europeanaProxy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">By default, any proxy without this flag can be interpreted as having the value false and  is a provider proxy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>happenedAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Happened At</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>happenedAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property associates an event with the place at which the event
+happened.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasMet</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Has Met</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>hasMet</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">edm:hasMet relates a resource with the objects or phenomena that have happened to or have happened together with the resource under consideration. We can abstractly think of history and the present as a series of ?meetings? between people and other things in space-time. Therefore we name this relationship as the things the object ?has met? in the course of its existence. These meetings are events in the proper sense, in which other people and things participate in any role.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Has Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>hasType</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property relates a resource with the concepts it belongs to in a suitable
+type system such as MIME or any thesaurus that captures categories of objects in a given field (e.g., the ?Objects? facet in Getty?s Art and Architecture Thesaurus). It does not capture aboutness.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasView</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Has View</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>hasView</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property relates a ORE aggregation about a CHO with a web resource
+providing a view of that CHO. Examples of view are: a thumbnail, a textual
+abstract and a table of contents. The ORE aggregation may be a Europeana
+Aggregation, in which case the view is an object owned by Europeana (i.e., an instance of edm:EuropeanaObject) or an aggregation contributed by a content provider. In order to capture both these cases, the domain of edm:hasView is ore:Aggregation and its range is edm:WebResource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>incorporates</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Incorporates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>incorporates</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property captures the use of some resource to add value to another
+resource. Such resources may be nested, such as performing a theater play text, and then recording the performance, or creating an artful edition of a collection of poems or just aggregating various poems in an anthology. There may be no single part that contains ultimately the incorporated object, which may be dispersed in the presentation. Therefore, incorporated resources do in general not form proper parts. Incorporated resources are not part of the same resource, but are taken from other resources, and have an independent history. Therefore edm:incorporates is not a sub-property of dcterm:hasPart.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isAnnotationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Is Annotation Of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>isAnnotationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property relates an annotation (a Europeana object) with the resource
+that it annotates.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isDerivativeOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Is Derivative Of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>isDerivativeOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property captures a narrower notion of derivation than edm:isSimilarTo, in the sense that it relates a resource to another one, obtained by reworking, reducing, expanding, parts or the whole contents of the former, and possibly adding some minor parts. Versions have an even narrower meaning, in that it requires common identity between the related resources. Translations, summaries, abstractions etc. do not qualify as versions, but do qualify as derivatives.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isNextInSequence</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Is Next In Sequence Of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>isNextInSequence</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">edm:isNextInSequence relates two resources S and R that are ordered parts of the same resource A, and such that S comes immediately after R in the order created by their being parts of A.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isRelatedTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Is Related To</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>isRelatedTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">edm:isRelatedTo is the most general contextual property in EDM. Contextual
+properties have typically to do either with the things that have happened to or together with the object under consideration, or what the object refers to by its shape, form or features in a figural or encoded form. For sake of simplicity, we include in the contextual relationships also the scholarly classification, which may have either to do with the role and cultural connections of the object in the past, or its kind of structure, substance or contents as it can be verified at present.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isRepresentationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Is Representation Of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>isRepresentationOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property associates an information resource to the resource (if any) that it represents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isShownAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Is Shown At</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>isShownAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">An unambiguous URL reference to the digital object on the provider?s web site in its full information context.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isShownBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Is Shown By</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>isShownBy</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">An unambiguous URL reference to the digital object on the provider?s web site in the best available resolution/quality.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isSimilarTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Is Similar To</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>isSimilarTo</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The most generic derivation property, covering also the case of questionable derivation. Is Similar To asserts that parts of the contents of one resource exhibit common features with respect to ideas, shapes, structures, colors, words, plots, topics with the contents of the related resource. Those common features may be attributed to a common origin or influence (in particular for derivation), but also to more generic cultural or psychological factors.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isSuccessorOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Is Successor Of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>isSuccessorOf</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property captures the relation between the continuation of a resource and that resource. This applies to a story, a serial, a journal etc. No content of the successor resource is identical or has a similar form with that of the precursor. The similarity is only in the context, subjects and figures of a plot. Successors typically form part of a common whole ? such as a trilogy, a journal, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>landingPage</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Landing Page</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>landingPage</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property captures the relation between a Europeana aggregation representing a cultural heritage object and a (reference) Web resource giving access to that object. Europeana provides the value for this property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>language</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Europeana Language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>language</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The value for this element is added by the Data Ingestion Team as part of the ingestion process, based on the language of the data provider.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>object</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>object</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The URL of a thumbnail representing the digital object or, if there is no such
+thumbnail, the URL of the digital object in the best resolution available on the
+web site of the data provider from which a thumbnail could be generated. This will often be the same URL as given in edm:isShownBy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>occurredAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Occured At</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>occurredAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property associates an event to the smallest known time span that
+overlaps with the occurrence of that event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>preview</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Preview</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>preview</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The URL of a thumbnail representing the digital object, generated by Europeana.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>provider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>provider</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The name or identifier of the organization who delivers data directly to an aggregation service (e.g. Europeana)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>realizes</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Realizes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>realizes</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property describes a relation between a physical thing and the information resource that is contained in it, visible at it or otherwise carried by it, if applicable.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>rights</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Europeana Rights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>rights</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Information about copyright of the digital object as specified by isShownBy
+and isShownAt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>type</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Europeana Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>type</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">The Europeana material type of the resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ugc</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">UGC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>ugc</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This element is used to identify user generated content (also called user created content).  It should be applied to all digitised or born digital content contributed by the general public and collected by Europeana through a crowdsourcing initiative or project.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>unstored</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Unstored</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>unstored</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This is a container element which includes all relevant information that
+otherwise cannot be mapped to another element in the ESE.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>uri</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Europeana URI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>uri</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This is a tag created by a user through the Europeana interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>userTag</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">User Tag</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>userTag</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This is a tag created by a user through the Europeana interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>wasPresentAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Was Present At</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>wasPresentAt</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">This property associates the people, things or information resources with an event at which they were present</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>year</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Europeana Year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>year</IRI>
+        <Literal xml:lang="en" datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">A point of time associated with an event in the life of the original analog or
+born digital object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="research:name"/>
+        <IRI>http://www.ibi.hu-berlin.de/institut/personen/iwanowa</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Julia Iwanowa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="research:name"/>
+        <IRI>http://www.ics.forth.gr/isl/people/people_individual.jsp?Person_ID=2</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Martin Doerr</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="research:name"/>
+        <IRI>http://www.image.ece.ntua.gr/~ndroso/</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Nasos Drosopoulos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="research:name"/>
+        <IRI>http://www.image.ntua.gr/~tzouvaras/</IRI>
+        <Literal datatypeIRI="http://www.w3.org/1999/02/22-rdf-syntax-ns/PlainLiteral">Vassilis Tzouvaras</Literal>
+    </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty abbreviatedIRI="dublincorens:relation"/>
+        <AnnotationProperty IRI="isRelatedTo"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty abbreviatedIRI="dublincorens:subject"/>
+        <AnnotationProperty IRI="isRelatedTo"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm/P79_beginning_is_qualified_by"/>
+        <AnnotationProperty IRI="begin"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm/P80_end_is_qualified_by"/>
+        <AnnotationProperty IRI="end"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="country"/>
+        <AnnotationProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm/P12_occurred_in_the_presence_of"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="dataProvider"/>
+        <AnnotationProperty abbreviatedIRI="dcterms:provenance"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="hasType"/>
+        <AnnotationProperty IRI="isRelatedTo"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="realizes"/>
+        <AnnotationProperty IRI="isRelatedTo"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="userTag"/>
+        <AnnotationProperty abbreviatedIRI="dublincorens:description"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="year"/>
+        <AnnotationProperty abbreviatedIRI="dcterms:temporal"/>
+    </SubAnnotationPropertyOf>
+    <AnnotationPropertyDomain>
+        <AnnotationProperty IRI="dataProvider"/>
+        <AbbreviatedIRI>ore:Aggregation</AbbreviatedIRI>
+    </AnnotationPropertyDomain>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 3.4.5-SNAPSHOT) http://owlapi.sourceforge.net -->
