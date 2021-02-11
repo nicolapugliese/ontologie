@@ -1,0 +1,1742 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.europeana.eu/schemas/edm/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.europeana.eu/schemas/edm/">
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+        <Literal xml:lang="en">The Europeana Data Model (EDM) is aimed at being an integration medium for collecting, connecting and enriching the descriptions provided by Europeana data providers. The RDF vocabulary for http://www.europeana.eu/schemas/edm/ defines the elements introduced by EDM (as opposed to the ones EDM re-uses from other namespaces).</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/modified"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2013-05-20</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+        <Literal xml:lang="en">Europeana Data Model (EDM) vocabulary</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2010-03-25</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/changes"/>
+        <Literal xml:lang="en">
+=======
+Changes between ontology file EDM version 5.2.4 (edm, was once EDM-v524-120820)
+and ontology file EDM version 5.2.3 (EDM-v523-120123)
+=======
+1. edm:isShownAt made a sub-property of edm:hasView
+2. added edm:begin and edm:end and their mappings to CRM
+3. added owl:Class declarations added for compatibility with some OWL-DL reasoners (feedback from Pedro Szekely, ISI)
+4. added &quot;of&quot; at the end of the label for edm:isNextInSequence
+5. added vocabulary metadata to follow Linked Open Vocabularies (http://lov.okfn.org/) and ADMS (https://joinup.ec.europa.eu/asset/adms/release/100) guidelines
+6. removed a domain axiom on edm:hasMet
+7. added edm:collectionName and edm:europeanaProxy
+8. removed version number from file name
+9. generalisation of Country, DataProvider and Provider
+10. updated CRM namespace and CRM class and property identifiers
+11. added FRBRoo mappings
+      </Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/example"/>
+        <IRI>http://data.europeana.eu</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/example"/>
+        <IRI>http://pro.europeana.eu/case-studies-edm</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+        <Literal>edm</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+        <Literal>http://www.europeana.eu/schemas/edm/</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://purl.org/vocommons/voaf#toDoList"/>
+        <Literal xml:lang="en">
+=======
+Remaining TODOs for ontology file EDM version 5.2.4
+=======
+- finish and check FRBRoo mappings according to the recommendations of the EDM-FRBRoo task force. Also include implicit mappings and mappings for elements outside the EDM namespace?
+- try to capture formal cardinality constraints resulting from &quot;Obligation and Occurrence&quot; documentation, which should be attached to non-EDM constructs (esp. ore:Aggregation)
+- continue adding documentation values (skos:scopeNote, skos:example, etc, according to 1.), starting from edm:InformationResource. Add all Europeana examples and rationale notes for non-EDM constructs
+- use specific EDM-doc properties for &quot;rationale&quot; and &quot;obligation and occurrence&quot;. Use skos:definition for &quot;Europeana definition&quot;, skos:example for &quot;Example&quot;, skos:note for &quot;Europeana note&quot;
+      </Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+        <Literal>5.2.4</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.w3.org/ns/adms#relatedWebPage"/>
+        <IRI>http://europeanalabs.eu/wiki/EDMPrototypingTask11</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://www.w3.org/ns/radion#versionNotes"/>
+        <Literal xml:lang="en">The present specification is based on the document &quot;Definition of the Europeana Data Model elements&quot;, originally edited by Carlo Meghini. It is aligned with the version 5.2.4 of these EDM Definitions.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/homepage"/>
+        <IRI>http://pro.europeana.eu/edm-documentation</IRI>
+    </Annotation>
+    <Declaration>
+        <Class IRI="Agent"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EuropeanaAggregation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="EuropeanaObject"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Event"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="InformationResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="NonInformationResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="PhysicalThing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="ProvidedCHO"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="TimeSpan"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="WebResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.openarchives.org/ore/terms/Aggregation"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.openarchives.org/ore/terms/Proxy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="aggregatedCHO"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="collectionName"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="currentLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="europeanaProxy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="happenedAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasView"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="incorporates"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isAnnotationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isNextInSequence"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isRepresentationOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isShownAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isShownBy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isSuccessorOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="landingPage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="object"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="occurredAt"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="preview"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="realizes"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="rights"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="uri"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="wasPresentAt"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="begin"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="end"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="type"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="ugc"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#E4_Period"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/language"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://europeana.eu"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="year"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#E39_Actor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#P67_refers_to"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#E53_Place"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://metadata.net/harmony/abc#Temporality"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.ics.forth.gr/isl/people/people_individual.jsp?Person_ID=2"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocommons/voaf#toDoList"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocab/frbr/core#Place"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.image.ntua.gr/~tzouvaras/"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#P129_is_about"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/example"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.openarchives.org/ore/terms/aggregates"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#space-region"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#time-interval"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/adms#relatedWebPage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://iflastandards.info/ns/fr/frbr/frbroo/F8_Event"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/publisher"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/terms/hasFormat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://data.semanticweb.org/person/antoine-isaac"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/format"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://iflastandards.info/ns/fr/frbr/frbroo/F4_Manifestation_Singleton"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="userTag"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/dc/terms/PeriodOfTime"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#P138_represents"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#E18_Physical_Thing"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/terms/replaces"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI=""/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://metadata.net/harmony/abc#Time"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/provenance"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="country"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#P79_beginning_is_qualified_by"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://www.openarchives.org/ore/terms/proxyFor"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/ns/radion#versionNotes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/homepage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://iflastandards.info/ns/fr/frbr/frbroo/F9_Place"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isDerivativeOf"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/modified"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/terms/isFormatOf"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/issued"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="hasMet"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/terms/tableOfContents"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/coverage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="isSimilarTo"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/temporal"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#P12_occurred_in_the_presence_of"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/terms/isReplacedBy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.ibi.hu-berlin.de/institut/personen/iwanowa"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespaceUri"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocab/frbr/core#Event"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="isRelatedTo"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="http://www.image.ece.ntua.gr/~ndroso/"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation_Product_Type"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#P80_end_is_qualified_by"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#E89_Propositional_Object"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/vocab/vann/changes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#E52_Time-Span"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="http://metadata.net/harmony/abc#Place"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/terms/isVersionOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="http://purl.org/dc/terms/spatial"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="provider"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="http://iflastandards.info/ns/fr/frbr/frbroo/F8_Event"/>
+        <Class IRI="Event"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://iflastandards.info/ns/fr/frbr/frbroo/F9_Place"/>
+        <Class IRI="Place"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://metadata.net/harmony/abc#Place"/>
+        <Class IRI="Place"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://metadata.net/harmony/abc#Temporality"/>
+        <Class IRI="Event"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://metadata.net/harmony/abc#Time"/>
+        <Class IRI="TimeSpan"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/vocab/frbr/core#Event"/>
+        <Class IRI="Event"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://purl.org/vocab/frbr/core#Place"/>
+        <Class IRI="Place"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#E18_Physical_Thing"/>
+        <Class IRI="PhysicalThing"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#E39_Actor"/>
+        <Class IRI="Agent"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#E4_Period"/>
+        <Class IRI="Event"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#E52_Time-Span"/>
+        <Class IRI="TimeSpan"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#E53_Place"/>
+        <Class IRI="Place"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#E89_Propositional_Object"/>
+        <Class IRI="InformationResource"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="EuropeanaAggregation"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="aggregatedCHO"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="InformationResource"/>
+        <ObjectUnionOf>
+            <Class IRI="http://iflastandards.info/ns/fr/frbr/frbroo/F1_Work"/>
+            <Class IRI="http://iflastandards.info/ns/fr/frbr/frbroo/F2_Expression"/>
+            <Class IRI="http://iflastandards.info/ns/fr/frbr/frbroo/F3_Manifestation_Product_Type"/>
+            <Class IRI="http://iflastandards.info/ns/fr/frbr/frbroo/F4_Manifestation_Singleton"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="InformationResource"/>
+        <ObjectUnionOf>
+            <Class IRI="http://purl.org/vocab/frbr/core#Expression"/>
+            <Class IRI="http://purl.org/vocab/frbr/core#Manifestation"/>
+            <Class IRI="http://purl.org/vocab/frbr/core#Work"/>
+        </ObjectUnionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="NonInformationResource"/>
+        <ObjectComplementOf>
+            <Class IRI="InformationResource"/>
+        </ObjectComplementOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="Place"/>
+        <Class IRI="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#space-region"/>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="TimeSpan"/>
+        <Class IRI="http://www.loa-cnr.it/ontologies/DOLCE-Lite.owl#time-interval"/>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="Agent"/>
+        <Class IRI="NonInformationResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EuropeanaAggregation"/>
+        <Class IRI="EuropeanaObject"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EuropeanaAggregation"/>
+        <Class IRI="http://www.openarchives.org/ore/terms/Aggregation"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="EuropeanaObject"/>
+        <Class IRI="WebResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <Class IRI="NonInformationResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Event"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="happenedAt"/>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="PhysicalThing"/>
+        <Class IRI="NonInformationResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="Place"/>
+        <Class IRI="NonInformationResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="ProvidedCHO"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectInverseOf>
+                <ObjectProperty IRI="aggregatedCHO"/>
+            </ObjectInverseOf>
+        </ObjectExactCardinality>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSpan"/>
+        <Class IRI="http://purl.org/dc/terms/PeriodOfTime"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="TimeSpan"/>
+        <Class IRI="NonInformationResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="WebResource"/>
+        <Class IRI="InformationResource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <Class IRI="NonInformationResource"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
+        <NamedIndividual IRI="http://europeana.eu"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <NamedIndividual IRI="http://data.semanticweb.org/person/antoine-isaac"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://purl.org/vocommons/voaf#Vocabulary"/>
+        <NamedIndividual IRI=""/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <NamedIndividual IRI="http://www.ibi.hu-berlin.de/institut/personen/iwanowa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <NamedIndividual IRI="http://www.ics.forth.gr/isl/people/people_individual.jsp?Person_ID=2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <NamedIndividual IRI="http://www.image.ece.ntua.gr/~ndroso/"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <NamedIndividual IRI="http://www.image.ntua.gr/~tzouvaras/"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Organization"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="http://xmlns.com/foaf/0.1/Person"/>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.ibi.hu-berlin.de/institut/personen/iwanowa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.ics.forth.gr/isl/people/people_individual.jsp?Person_ID=2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.image.ece.ntua.gr/~ndroso/"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://www.image.ntua.gr/~tzouvaras/"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <NamedIndividual IRI=""/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <NamedIndividual IRI=""/>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://data.semanticweb.org/person/antoine-isaac"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/publisher"/>
+        <NamedIndividual IRI=""/>
+        <NamedIndividual IRI="http://europeana.eu"/>
+    </ObjectPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/contributor"/>
+        <ObjectProperty IRI="hasMet"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/coverage"/>
+        <ObjectProperty IRI="hasMet"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/creator"/>
+        <ObjectProperty IRI="hasMet"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/date"/>
+        <ObjectProperty IRI="hasMet"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/format"/>
+        <ObjectProperty IRI="hasType"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/language"/>
+        <ObjectProperty IRI="hasType"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/publisher"/>
+        <ObjectProperty IRI="hasMet"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/source"/>
+        <ObjectProperty IRI="isDerivativeOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/type"/>
+        <ObjectProperty IRI="hasType"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/terms/hasFormat"/>
+        <ObjectInverseOf>
+            <ObjectProperty IRI="isDerivativeOf"/>
+        </ObjectInverseOf>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/terms/hasVersion"/>
+        <ObjectInverseOf>
+            <ObjectProperty IRI="isDerivativeOf"/>
+        </ObjectInverseOf>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/terms/isFormatOf"/>
+        <ObjectProperty IRI="isDerivativeOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/terms/isReplacedBy"/>
+        <ObjectInverseOf>
+            <ObjectProperty IRI="isDerivativeOf"/>
+        </ObjectInverseOf>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/terms/isVersionOf"/>
+        <ObjectProperty IRI="isDerivativeOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/terms/replaces"/>
+        <ObjectProperty IRI="isDerivativeOf"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="http://purl.org/dc/terms/tableOfContents"/>
+        <ObjectProperty IRI="hasView"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="aggregatedCHO"/>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="aggregatedCHO"/>
+        <ObjectProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#P129_is_about"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="aggregatedCHO"/>
+        <ObjectProperty IRI="http://www.openarchives.org/ore/terms/aggregates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="currentLocation"/>
+        <ObjectProperty IRI="http://purl.org/dc/terms/spatial"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="happenedAt"/>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasMet"/>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="hasView"/>
+        <ObjectProperty IRI="http://www.openarchives.org/ore/terms/aggregates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="incorporates"/>
+        <ObjectProperty IRI="isSimilarTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isAnnotationOf"/>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isAnnotationOf"/>
+        <ObjectProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#P67_refers_to"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isDerivativeOf"/>
+        <ObjectProperty IRI="isSimilarTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isNextInSequence"/>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isRepresentationOf"/>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isRepresentationOf"/>
+        <ObjectProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#P138_represents"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isShownAt"/>
+        <ObjectProperty IRI="hasView"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isShownBy"/>
+        <ObjectProperty IRI="hasView"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isSimilarTo"/>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="isSuccessorOf"/>
+        <ObjectProperty IRI="isSimilarTo"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="landingPage"/>
+        <ObjectProperty IRI="http://www.openarchives.org/ore/terms/aggregates"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="object"/>
+        <ObjectProperty IRI="hasView"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="occurredAt"/>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="preview"/>
+        <ObjectProperty IRI="hasView"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="provider"/>
+        <ObjectProperty IRI="hasMet"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="wasPresentAt"/>
+        <ObjectProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+    </SubObjectPropertyOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="aggregatedCHO"/>
+        <Class IRI="http://www.openarchives.org/ore/terms/Aggregation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="currentLocation"/>
+        <ObjectUnionOf>
+            <Class IRI="ProvidedCHO"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://www.openarchives.org/ore/terms/Proxy"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.openarchives.org/ore/terms/proxyFor"/>
+                    <Class IRI="ProvidedCHO"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="dataProvider"/>
+        <Class IRI="http://www.openarchives.org/ore/terms/Aggregation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="happenedAt"/>
+        <Class IRI="Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasType"/>
+        <ObjectUnionOf>
+            <Class IRI="ProvidedCHO"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://www.openarchives.org/ore/terms/Proxy"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.openarchives.org/ore/terms/proxyFor"/>
+                    <Class IRI="ProvidedCHO"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="hasView"/>
+        <Class IRI="http://www.openarchives.org/ore/terms/Aggregation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isAnnotationOf"/>
+        <Class IRI="EuropeanaObject"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="isRepresentationOf"/>
+        <Class IRI="InformationResource"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="occurredAt"/>
+        <Class IRI="Event"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="realizes"/>
+        <Class IRI="PhysicalThing"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="wasPresentAt"/>
+        <ObjectUnionOf>
+            <Class IRI="Agent"/>
+            <Class IRI="InformationResource"/>
+            <Class IRI="PhysicalThing"/>
+        </ObjectUnionOf>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="aggregatedCHO"/>
+        <Class IRI="ProvidedCHO"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="currentLocation"/>
+        <Class IRI="Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="dataProvider"/>
+        <Class IRI="Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="happenedAt"/>
+        <Class IRI="Place"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasType"/>
+        <Class IRI="NonInformationResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="hasView"/>
+        <Class IRI="WebResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isAnnotationOf"/>
+        <ObjectUnionOf>
+            <Class IRI="ProvidedCHO"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://www.openarchives.org/ore/terms/Proxy"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.openarchives.org/ore/terms/proxyFor"/>
+                    <Class IRI="ProvidedCHO"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isShownAt"/>
+        <Class IRI="WebResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="isShownBy"/>
+        <Class IRI="WebResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="landingPage"/>
+        <Class IRI="WebResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="object"/>
+        <Class IRI="WebResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="occurredAt"/>
+        <Class IRI="TimeSpan"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="preview"/>
+        <Class IRI="WebResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="provider"/>
+        <Class IRI="Agent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="realizes"/>
+        <Class IRI="InformationResource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="wasPresentAt"/>
+        <Class IRI="Event"/>
+    </ObjectPropertyRange>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://purl.org/dc/elements/1.1/relation"/>
+        <DataProperty IRI="isRelatedTo"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://purl.org/dc/elements/1.1/subject"/>
+        <DataProperty IRI="isRelatedTo"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#P79_beginning_is_qualified_by"/>
+        <DataProperty IRI="begin"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#P80_end_is_qualified_by"/>
+        <DataProperty IRI="end"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="begin"/>
+        <DataProperty IRI="isRelatedTo"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="end"/>
+        <DataProperty IRI="isRelatedTo"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="hasType"/>
+        <DataProperty IRI="isRelatedTo"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="realizes"/>
+        <DataProperty IRI="isRelatedTo"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="type"/>
+        <DataProperty IRI="http://purl.org/dc/elements/1.1/type"/>
+    </SubDataPropertyOf>
+    <DataPropertyDomain>
+        <DataProperty IRI="begin"/>
+        <ObjectUnionOf>
+            <Class IRI="Agent"/>
+            <Class IRI="TimeSpan"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="end"/>
+        <ObjectUnionOf>
+            <Class IRI="Agent"/>
+            <Class IRI="TimeSpan"/>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="isRelatedTo"/>
+        <ObjectUnionOf>
+            <Class IRI="ProvidedCHO"/>
+            <ObjectIntersectionOf>
+                <Class IRI="http://www.openarchives.org/ore/terms/Proxy"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="http://www.openarchives.org/ore/terms/proxyFor"/>
+                    <Class IRI="ProvidedCHO"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectUnionOf>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="type"/>
+        <DataOneOf>
+            <Literal>3D</Literal>
+            <Literal>IMAGE</Literal>
+            <Literal>SOUND</Literal>
+            <Literal>TEXT</Literal>
+            <Literal>VIDEO</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="ugc"/>
+        <DataOneOf>
+            <Literal>TRUE</Literal>
+        </DataOneOf>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <IRI>http://europeana.eu</IRI>
+        <Literal>Europeana</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <IRI>http://data.semanticweb.org/person/antoine-isaac</IRI>
+        <Literal>Antoine Isaac</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Agent</IRI>
+        <Literal xml:lang="en">Agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>Agent</IRI>
+        <Literal>This class comprises people, either individually or in groups, who have the
+potential to perform intentional actions for which they can be held responsible.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>Agent</IRI>
+        <Literal>Leonardo da Vinci, the British Museum, W3C</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+        <IRI>Agent</IRI>
+        <Literal>Rationale: This class is a domain of edm:wasPresentAt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal>Europeana Aggregation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal>The set of resources related to a single Cultural Heritage Object that
+collectively represent that object in Europeana. Such set consists of: all
+descriptions about the object that Europeana collects from (possibly different) content providers, including thumbnails and other forms of abstractions, as well as of the description of the object Europeana builds.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal xml:lang="en">The 56th issue of &quot;Le Temps&quot; is a (different) Cultural Heritage Object represented in Europeana by another EuropeanaAggregation instance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal xml:lang="en">The journal &quot;Le Temps&quot; is a Cultural Heritage Object represented in Europeana by one EuropeanaAggregation instance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal xml:lang="en">The painting Mona Lisa is a Cultural Heritage Object represented in Europeana by one EuropeanaAggregation instance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal xml:lang="en">An instance of EuropeanaAggregation is created at ingestion time for each different Cultural Heritage Object recognized by Europeana. Such instance is associated to the Cultural Heritage Object that it is about, by the property edm:aggregatedCHO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal xml:lang="en">Obligation and Occurence: The relation between the Cultural Heritage Objects represented in Europeana and the instances of the class EuropeanaAggregation is one-to-one, in the data maintained by Europeana: every Cultural Heritage Object is represented by an instance of EuropeanaAggregation, and every instance of EuropeanaAggregation represent a Cultural Heritage Object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+        <IRI>EuropeanaAggregation</IRI>
+        <Literal xml:lang="en">Rationale: This class is used in Europeana to gather in a single conceptual unit all the information about a Cultural Heritage Object, necessary for all operations on these objects.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>EuropeanaObject</IRI>
+        <Literal xml:lang="en">Europeana Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>EuropeanaObject</IRI>
+        <Literal xml:lang="en">Any object that is the result of Europeanaâ€™s activities</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>EuropeanaObject</IRI>
+        <Literal xml:lang="en">An annotation created by a user through the Europeana portal</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>EuropeanaObject</IRI>
+        <Literal xml:lang="en">Any content created by the users through the service made available by Europeana for that purpose</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>EuropeanaObject</IRI>
+        <Literal xml:lang="en">Any instance of the class EuropeanaAggregation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+        <IRI>EuropeanaObject</IRI>
+        <Literal xml:lang="en">Rationale: This class is used to tag objects that are the result of activity of Europeana, and, as such, objects on which Europeana holds rights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en">Event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en">An event is a change &quot;of states in cultural, social or physical systems,
+ regardless of scale, brought about by a series or group of coherent physical,
+cultural, technological or legal phenomena&quot; (E5 Event in CIDOC CRM) or a &quot;set of coherent phenomena or cultural manifestations bounded in time and  space&quot; (E4 Period in CIDOC CRM)
+</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en">the 2nd World War</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en">the act of painting Mona Lisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en">the change of custody of Mona Lisa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en">Events are identified either by the content provider or by Europeana enrichment at ingestion time</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+        <IRI>Event</IRI>
+        <Literal xml:lang="en">Rationale:This class is a domain of edm:happenedAt and the domain of edm:occurredAt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>InformationResource</IRI>
+        <Literal xml:lang="en">Information Resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>InformationResource</IRI>
+        <Literal xml:lang="en">An information resource is a resource whose essential characteristics can be conveyed in a single message. It can be associated with a URI, it can have a representation, for example: a text is an InformationResource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>NonInformationResource</IRI>
+        <Literal xml:lang="en">Non-Information Resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>NonInformationResource</IRI>
+        <Literal xml:lang="en">All resources that are not information resources.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>PhysicalThing</IRI>
+        <Literal xml:lang="en">Physical Thing</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>PhysicalThing</IRI>
+        <Literal xml:lang="en">A persistent physical item such as a painting, a building, a book or a stone.
+Persons are not items. This class represents Cultural Heritage Objects known to Europeana to be physical things (such as Mona Lisa) as well as all physical things Europeana refers to in the descriptions of Cultural Heritage Objects (such as the Rosetta Stone).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>Place</IRI>
+        <Literal xml:lang="en">Place</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>Place</IRI>
+        <Literal xml:lang="en">An &quot;extent in space, in particular on the surface of the earth, in the pure sense of physics: independent from temporal phenomena and matter&quot; (CIDOC CRM)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ProvidedCHO</IRI>
+        <Literal xml:lang="en">Provided CHO</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>ProvidedCHO</IRI>
+        <Literal xml:lang="en">This class comprises the Cultural Heritage objects that Europeana collects descriptions about.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#example"/>
+        <IRI>ProvidedCHO</IRI>
+        <Literal xml:lang="en">Mona Lisa, Winged Victory of Samothrace</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
+        <IRI>ProvidedCHO</IRI>
+        <Literal xml:lang="en">This class has been mostly motivated by the need to assign a type to the â€œcentral nodeâ€ in the EDM pattern, during the ingestion process, related to the XML expression of EDM at that stage. It was especially intended to fit the cases where edm:PhysicalThing  cannot be used as the type of the resource standing for the real-world object (independently of any specific data contributor perspective).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#scopeNote"/>
+        <IRI>ProvidedCHO</IRI>
+        <Literal xml:lang="en">Rationale: This class is the range of edm:aggregatedCHO. A resource of type ProvidedCHO can be the subject of statements using edm:isRelatedTo or any more specific property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>TimeSpan</IRI>
+        <Literal xml:lang="en">Time Span</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>TimeSpan</IRI>
+        <Literal xml:lang="en">The class of &quot;abstract temporal extents, in the sense of Galilean physics,
+ having a beginning, an end and a duration&quot; (CIDOC CRM)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>WebResource</IRI>
+        <Literal xml:lang="en">Web Resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>WebResource</IRI>
+        <Literal xml:lang="en">Information Resources that have at least one Web Representation and at least
+a URI.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>aggregatedCHO</IRI>
+        <Literal xml:lang="en">Aggregated Cultural Heritage Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>aggregatedCHO</IRI>
+        <Literal xml:lang="en">This property associates an ORE aggregation with the cultural heritage object(s) (CHO for short) it is about.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>begin</IRI>
+        <Literal xml:lang="en">Begin</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>begin</IRI>
+        <Literal xml:lang="en">This property denotes the start date of a period of time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>collectionName</IRI>
+        <Literal xml:lang="en">Collection Name</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>collectionName</IRI>
+        <Literal xml:lang="en">This property holds the collection identifier given to the dataset in Europeana.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
+        <IRI>collectionName</IRI>
+        <Literal xml:lang="en">The value of this property is provided by Europeana as part of the ingestion process.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>country</IRI>
+        <Literal xml:lang="en">Country</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>currentLocation</IRI>
+        <Literal xml:lang="en">Current Location</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>currentLocation</IRI>
+        <Literal xml:lang="en">The geographic location and/or name of the repository, building, site, or other entity whose boundaries presently include the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>dataProvider</IRI>
+        <Literal xml:lang="en">Data Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>dataProvider</IRI>
+        <Literal xml:lang="en">The name or identifier of the organisation who contributes data indirectly to an aggregation service (e.g. Europeana).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>end</IRI>
+        <Literal xml:lang="en">End</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>end</IRI>
+        <Literal xml:lang="en">This property denotes the end date of a period of time.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>europeanaProxy</IRI>
+        <Literal xml:lang="en">Europeana Proxy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>europeanaProxy</IRI>
+        <Literal xml:lang="en">This property serves only as a flag to indicate that a proxy is a Europeana proxy (as opposed to a provider proxy).  It is for internal use only.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#note"/>
+        <IRI>europeanaProxy</IRI>
+        <Literal xml:lang="en">By default, any proxy without this flag can be interpreted as having the value false and  is a provider proxy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>happenedAt</IRI>
+        <Literal xml:lang="en">Happened At</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>happenedAt</IRI>
+        <Literal xml:lang="en">This property associates an event with the place at which the event
+happened.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasMet</IRI>
+        <Literal xml:lang="en">Has Met</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>hasMet</IRI>
+        <Literal xml:lang="en">edm:hasMet relates a resource with the objects or phenomena that have happened to or have happened together with the resource under consideration. We can abstractly think of history and the present as a series of â€œmeetingsâ€ between people and other things in space-time. Therefore we name this relationship as the things the object â€œhas metâ€ in the course of its existence. These meetings are events in the proper sense, in which other people and things participate in any role.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasType</IRI>
+        <Literal xml:lang="en">Has Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>hasType</IRI>
+        <Literal xml:lang="en">This property relates a resource with the concepts it belongs to in a suitable
+type system such as MIME or any thesaurus that captures categories of objects in a given field (e.g., the â€œObjectsâ€ facet in Gettyâ€™s Art and Architecture Thesaurus). It does not capture aboutness.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>hasView</IRI>
+        <Literal xml:lang="en">Has View</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>hasView</IRI>
+        <Literal xml:lang="en">This property relates a ORE aggregation about a CHO with a web resource
+providing a view of that CHO. Examples of view are: a thumbnail, a textual
+abstract and a table of contents. The ORE aggregation may be a Europeana
+Aggregation, in which case the view is an object owned by Europeana (i.e., an instance of edm:EuropeanaObject) or an aggregation contributed by a content provider. In order to capture both these cases, the domain of edm:hasView is ore:Aggregation and its range is edm:WebResource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>incorporates</IRI>
+        <Literal xml:lang="en">Incorporates</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>incorporates</IRI>
+        <Literal xml:lang="en">This property captures the use of some resource to add value to another
+resource. Such resources may be nested, such as performing a theater play text, and then recording the performance, or creating an artful edition of a collection of poems or just aggregating various poems in an anthology. There may be no single part that contains ultimately the incorporated object, which may be dispersed in the presentation. Therefore, incorporated resources do in general not form proper parts. Incorporated resources are not part of the same resource, but are taken from other resources, and have an independent history. Therefore edm:incorporates is not a sub-property of dcterm:hasPart.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isAnnotationOf</IRI>
+        <Literal xml:lang="en">Is Annotation Of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>isAnnotationOf</IRI>
+        <Literal xml:lang="en">This property relates an annotation (a Europeana object) with the resource
+that it annotates.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isDerivativeOf</IRI>
+        <Literal xml:lang="en">Is Derivative Of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>isDerivativeOf</IRI>
+        <Literal xml:lang="en">This property captures a narrower notion of derivation than edm:isSimilarTo, in the sense that it relates a resource to another one, obtained by reworking, reducing, expanding, parts or the whole contents of the former, and possibly adding some minor parts. Versions have an even narrower meaning, in that it requires common identity between the related resources. Translations, summaries, abstractions etc. do not qualify as versions, but do qualify as derivatives.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isNextInSequence</IRI>
+        <Literal xml:lang="en">Is Next In Sequence Of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>isNextInSequence</IRI>
+        <Literal xml:lang="en">edm:isNextInSequence relates two resources S and R that are ordered parts of the same resource A, and such that S comes immediately after R in the order created by their being parts of A.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isRelatedTo</IRI>
+        <Literal xml:lang="en">Is Related To</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>isRelatedTo</IRI>
+        <Literal xml:lang="en">edm:isRelatedTo is the most general contextual property in EDM. Contextual
+properties have typically to do either with the things that have happened to or together with the object under consideration, or what the object refers to by its shape, form or features in a figural or encoded form. For sake of simplicity, we include in the contextual relationships also the scholarly classification, which may have either to do with the role and cultural connections of the object in the past, or its kind of structure, substance or contents as it can be verified at present.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isRepresentationOf</IRI>
+        <Literal xml:lang="en">Is Representation Of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>isRepresentationOf</IRI>
+        <Literal xml:lang="en">This property associates an information resource to the resource (if any) that it represents</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isShownAt</IRI>
+        <Literal xml:lang="en">Is Shown At</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>isShownAt</IRI>
+        <Literal xml:lang="en">An unambiguous URL reference to the digital object on the providerâ€™s web site in its full information context.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isShownBy</IRI>
+        <Literal xml:lang="en">Is Shown By</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>isShownBy</IRI>
+        <Literal xml:lang="en">An unambiguous URL reference to the digital object on the providerâ€™s web site in the best available resolution/quality.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isSimilarTo</IRI>
+        <Literal xml:lang="en">Is Similar To</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>isSimilarTo</IRI>
+        <Literal xml:lang="en">The most generic derivation property, covering also the case of questionable derivation. Is Similar To asserts that parts of the contents of one resource exhibit common features with respect to ideas, shapes, structures, colors, words, plots, topics with the contents of the related resource. Those common features may be attributed to a common origin or influence (in particular for derivation), but also to more generic cultural or psychological factors.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>isSuccessorOf</IRI>
+        <Literal xml:lang="en">Is Successor Of</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>isSuccessorOf</IRI>
+        <Literal xml:lang="en">This property captures the relation between the continuation of a resource and that resource. This applies to a story, a serial, a journal etc. No content of the successor resource is identical or has a similar form with that of the precursor. The similarity is only in the context, subjects and figures of a plot. Successors typically form part of a common whole â€“ such as a trilogy, a journal, etc.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>landingPage</IRI>
+        <Literal xml:lang="en">Landing Page</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>landingPage</IRI>
+        <Literal xml:lang="en">This property captures the relation between a Europeana aggregation representing a cultural heritage object and a (reference) Web resource giving access to that object. Europeana provides the value for this property.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>language</IRI>
+        <Literal xml:lang="en">Europeana Language</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>language</IRI>
+        <Literal xml:lang="en">The value for this element is added by the Data Ingestion Team as part of the ingestion process, based on the language of the data provider.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>object</IRI>
+        <Literal xml:lang="en">Object</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>object</IRI>
+        <Literal xml:lang="en">The URL of a thumbnail representing the digital object or, if there is no such
+thumbnail, the URL of the digital object in the best resolution available on the
+web site of the data provider from which a thumbnail could be generated. This will often be the same URL as given in edm:isShownBy.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>occurredAt</IRI>
+        <Literal xml:lang="en">Occured At</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>occurredAt</IRI>
+        <Literal xml:lang="en">This property associates an event to the smallest known time span that
+overlaps with the occurrence of that event</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>preview</IRI>
+        <Literal xml:lang="en">Preview</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>preview</IRI>
+        <Literal xml:lang="en">The URL of a thumbnail representing the digital object, generated by Europeana.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>provider</IRI>
+        <Literal xml:lang="en">Provider</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>provider</IRI>
+        <Literal xml:lang="en">The name or identifier of the organization who delivers data directly to an aggregation service (e.g. Europeana)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>realizes</IRI>
+        <Literal xml:lang="en">Realizes</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>realizes</IRI>
+        <Literal xml:lang="en">This property describes a relation between a physical thing and the information resource that is contained in it, visible at it or otherwise carried by it, if applicable.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>rights</IRI>
+        <Literal xml:lang="en">Europeana Rights</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>rights</IRI>
+        <Literal xml:lang="en">Information about copyright of the digital object as specified by isShownBy
+and isShownAt</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>type</IRI>
+        <Literal xml:lang="en">Europeana Type</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>type</IRI>
+        <Literal xml:lang="en">The Europeana material type of the resource</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>ugc</IRI>
+        <Literal xml:lang="en">UGC</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>ugc</IRI>
+        <Literal xml:lang="en">This element is used to identify user generated content (also called user created content).  It should be applied to all digitised or born digital content contributed by the general public and collected by Europeana through a crowdsourcing initiative or project.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>unstored</IRI>
+        <Literal xml:lang="en">Unstored</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>unstored</IRI>
+        <Literal xml:lang="en">This is a container element which includes all relevant information that
+otherwise cannot be mapped to another element in the ESE.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>uri</IRI>
+        <Literal xml:lang="en">Europeana URI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>uri</IRI>
+        <Literal xml:lang="en">This is a tag created by a user through the Europeana interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>userTag</IRI>
+        <Literal xml:lang="en">User Tag</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>userTag</IRI>
+        <Literal xml:lang="en">This is a tag created by a user through the Europeana interface.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>wasPresentAt</IRI>
+        <Literal xml:lang="en">Was Present At</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>wasPresentAt</IRI>
+        <Literal xml:lang="en">This property associates the people, things or information resources with an event at which they were present</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <IRI>year</IRI>
+        <Literal xml:lang="en">Europeana Year</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://www.w3.org/2004/02/skos/core#definition"/>
+        <IRI>year</IRI>
+        <Literal xml:lang="en">A point of time associated with an event in the life of the original analog or
+born digital object.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <IRI>http://www.ibi.hu-berlin.de/institut/personen/iwanowa</IRI>
+        <Literal>Julia Iwanowa</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <IRI>http://www.ics.forth.gr/isl/people/people_individual.jsp?Person_ID=2</IRI>
+        <Literal>Martin Doerr</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <IRI>http://www.image.ece.ntua.gr/~ndroso/</IRI>
+        <Literal>Nasos Drosopoulos</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <IRI>http://www.image.ntua.gr/~tzouvaras/</IRI>
+        <Literal>Vassilis Tzouvaras</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid2147483649"/>
+        <Literal>Participants of Europeana Version 1.0 Work Package on Further Specification of Functionality and Interoperability aspects of Europeana (WP3)</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty IRI="http://xmlns.com/foaf/0.1/name"/>
+        <AnonymousIndividual nodeID="_:genid2147483651"/>
+        <Literal>Hugo Manguinhas</Literal>
+    </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="country"/>
+        <AnnotationProperty IRI="http://www.cidoc-crm.org/rdfs/cidoc-crm#P12_occurred_in_the_presence_of"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="dataProvider"/>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/provenance"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="userTag"/>
+        <AnnotationProperty IRI="http://purl.org/dc/elements/1.1/description"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty IRI="year"/>
+        <AnnotationProperty IRI="http://purl.org/dc/terms/temporal"/>
+    </SubAnnotationPropertyOf>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 5.1.13.2020-01-27T22:08:36Z) https://github.com/owlcs/owlapi/ -->
+
